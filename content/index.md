@@ -1,10 +1,9 @@
 ---
-title:
----
----
 title: Welcome to XuMingtian's Garden 🌸
 layout: folder
+
 ---
+
 
 > [!quote] 这里的每一篇笔记都是一颗种子，正在慢慢生长。
 > Welcome to my Digital Garden. 这里没有杂乱的算法推荐，只有我真实的思考轨迹。
@@ -49,7 +48,7 @@ layout: folder
 
 我在这个互联网角落独自耕耘，但也期待思想的碰撞。
 
-* **GitHub**: [XuMintian](https://github.com/你的GitHub用户名)
+* **GitHub**: [XuMintian](https://github.com/XuMintian)
 * **Email**: [byl2746962022@gmail.com](mailto:byl2746962022@gmail.com)
 
 > "The best time to plant a tree was 20 years ago. The second best time is now." 🌳
