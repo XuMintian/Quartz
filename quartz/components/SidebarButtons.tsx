@@ -50,13 +50,15 @@ export default (() => {
       }
       
       // 点击空白关闭 (可选，增强体验)
-      document.addEventListener('click', (e) => {
-        const target = e.target;
-        if (!target.closest('.sidebar') && !target.closest('.sidebar-btn')) {
-           body.classList.remove('show-left-sidebar');
-           body.classList.remove('show-right-sidebar');
-        }
-      }, { once: true }) // 只绑一次或者在每次nav里处理，这里简单处理即可
+      // 改成这样(删除第55-63行,替换成):
+      // 点击空白关闭 (可选,增强体验)
+        document.addEventListener('click', (e) => {
+          const target = e.target;
+          if (!target.closest('.sidebar') && !target.closest('.sidebar-btn')) {
+            body.classList.remove('show-left-sidebar');
+            body.classList.remove('show-right-sidebar');
+          }
+        })  // ✅ 去掉 { once: true },让它一直生效// 只绑一次或者在每次nav里处理，这里简单处理即可
     }
 
     // 1. 页面初次加载时运行
