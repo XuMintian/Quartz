@@ -4,7 +4,7 @@ import { fetchCanonical } from "./util"
 
 const p = new DOMParser()
 let activeAnchor: HTMLAnchorElement | null = null
-let hidePopoverTimeout: number | null = null  // 👈 新增这一行
+let hidePopoverTimeout: number | null = null
 
 async function mouseEnterHandler(
   this: HTMLAnchorElement,
@@ -109,21 +109,21 @@ async function mouseEnterHandler(
 
   document.body.appendChild(popoverElement)
 
-// 👇 新增:给新创建的预览框绑定鼠标事件
-popoverElement.addEventListener("mouseenter", () => {
-  if (hidePopoverTimeout !== null) {
-    clearTimeout(hidePopoverTimeout)
-    hidePopoverTimeout = null
+  // 给新创建的预览框绑定鼠标事件
+  popoverElement.addEventListener("mouseenter", () => {
+    if (hidePopoverTimeout !== null) {
+      clearTimeout(hidePopoverTimeout)
+      hidePopoverTimeout = null
+    }
+  })
+
+  popoverElement.addEventListener("mouseleave", () => {
+    clearActivePopover()
+  })
+
+  if (activeAnchor !== this) {
+    return
   }
-})
-
-popoverElement.addEventListener("mouseleave", () => {
-  clearActivePopover()
-})
-
-if (activeAnchor !== this) {
-  return
-}
 
   showPopover(popoverElement)
 }
@@ -134,48 +134,20 @@ function clearActivePopover() {
   allPopoverElements.forEach((popoverElement) => popoverElement.classList.remove("active-popover"))
 }
 
-// 👇 新增:延迟关闭的超时器
-let hidePopoverTimeout: number | null = null
-
 document.addEventListener("nav", () => {
   const links = [...document.querySelectorAll("a.internal")] as HTMLAnchorElement[]
   for (const link of links) {
     link.addEventListener("mouseenter", mouseEnterHandler)
     
-    // ✅ 改这里:鼠标离开链接时,延迟300ms再关闭
+    // 鼠标离开链接时,延迟300ms再关闭
     link.addEventListener("mouseleave", () => {
       hidePopoverTimeout = window.setTimeout(() => {
         clearActivePopover()
-      }, 300) // 给用户300ms时间把鼠标移到预览框上
+      }, 300)
     })
     
     window.addCleanup(() => {
       link.removeEventListener("mouseenter", mouseEnterHandler)
-
-
-// 改成:
-link.addEventListener("mouseleave", () => {
-  hidePopoverTimeout = window.setTimeout(() => {
-    clearActivePopover()
-  }, 300)
-})
     })
   }
-  
-  // ✅ 新增:监听所有预览框的鼠标事件
-  const allPopovers = document.querySelectorAll(".popover")
-  allPopovers.forEach((popover) => {
-    // 鼠标进入预览框时,取消关闭
-    popover.addEventListener("mouseenter", () => {
-      if (hidePopoverTimeout !== null) {
-        clearTimeout(hidePopoverTimeout)
-        hidePopoverTimeout = null
-      }
-    })
-    
-    // 鼠标离开预览框时,立即关闭
-    popover.addEventListener("mouseleave", () => {
-      clearActivePopover()
-    })
-  })
 })
