@@ -17,7 +17,6 @@ export const sharedPageComponents: SharedLayout = {
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
-    Component.Search(),
     Component.SidebarButtons(), // 👈 新加的，放在最上面
     Component.ConditionalRender({
       component: Component.Breadcrumbs(),
