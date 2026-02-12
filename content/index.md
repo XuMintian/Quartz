@@ -1,5 +1,5 @@
 ---
-title: Welcome to XuMingtian's Garden 🌸
+title: Welcome to XuMintian's Garden 🌸
 layout: folder
 
 ---
@@ -10,7 +10,7 @@ layout: folder
 
 ## 👋 About Me | 关于我
 
-你好！我是 **XuMingtian**。
+你好！我是 **XuMintian**。
 一名 19 岁的**电子信息工程**在读学生（ZZU & UOW Joint Program）。
 
 我不只是一个写代码的工科生，我还是：
