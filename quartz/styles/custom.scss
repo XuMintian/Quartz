@@ -167,33 +167,31 @@ a.internal:hover, a.external:hover {
    V9.2 精修：搜索置顶拉长 + 标题对齐
    ========================================================= */
 
+/* === 搜索框与标题置顶微调 === */
 @media (min-width: 800px) {
-  /* 1. 让 Header 里的组件上下叠放并居中 */
+  
+  /* 1. Header 容器：去掉多余内边距，强制向上对齐 */
   header {
     display: flex !important;
-    flex-direction: column !important; /* 强制上下排队 */
-    align-items: center !important;    /* 强制水平居中 */
-    width: 100% !important;
-    padding-top: 2rem !important;      /* 离房顶留点距离 */
-    gap: 0.5rem !important;            /* 搜索框和标题的间距 */
+    flex-direction: column !important;
+    align-items: center !important;
+    
+    /* 👇 关键：留出和按钮(20px)差不多的距离，让第一排文字/框框对齐按钮 */
+    margin-top: 1.5rem !important; 
+    margin-bottom: 2rem !important; /* 和下面正文拉开点距离 */
+    gap: 0.5rem; /* 搜索框和标题之间的缝隙 */
   }
 
-  /* 2. 搜索框：扩展到很长 */
+  /* 2. 搜索框：宽度调整 */
   .search {
     width: 100% !important;
-    max-width: 800px !important;       /* 👈 改这个数字可以控制它到底多长 */
-    margin: 0 !important;              /* 清除之前的边距干扰 */
+    max-width: 700px !important; /* 你想要的“很长” */
+    margin: 0 !important; /* 没有任何外边距，完全听 header 指挥 */
   }
 
-  /* 3. 标题：紧随其后，微调样式 */
-  .page-title {
-    margin: 0 !important;
-    font-size: 1.8rem !important;      /* 如果觉得标题太大/太小可以在这调 */
+  /* 3. 搜索框内部微调 (让它看起来和按钮风格一致) */
+  .search-button {
+    background-color: rgba(255, 255, 255, 0.5); /* 稍微透明一点 */
+    backdrop-filter: blur(5px);
   }
-}
-
-/* 顺便清理一下你之前可能留下的 search 边距代码，防止冲突 */
-.search {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
 }
