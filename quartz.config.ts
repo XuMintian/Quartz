@@ -40,15 +40,15 @@ const config: QuartzConfig = {
           textHighlight: "rgba(240, 98, 145, 0.31)",
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
+      light: "#161618",         // 背景：深邃的炭黑 (不是死黑，护眼且有质感)
+      lightgray: "#2e2e32",     // 代码块/边框：深灰 (让内容块凸显出来)
+      gray: "#ad909e",          // 次要信息：带一点点粉调的灰，和主题呼应
+      darkgray: "#ebebec",      // 正文：接近纯白 (在黑底上阅读最清晰)
+      dark: "#1bbcd8",          // 标题：保持你的【青色】，在黑底上会非常酷炫！
+      secondary: "#f06292",     // 链接：保持你的【粉色】，形成经典的蓝粉撞色
+      tertiary: "#cddc39",      // 悬停/高亮：把你的荧光黄稍微调柔和一点，避免在黑夜太刺眼
+      highlight: "rgba(255, 252, 62, 0.15)", // 保持你的高亮设置
+      textHighlight: "rgba(240, 98, 145, 0.31)", // 保持你的文本高亮
         },
       },
     },
