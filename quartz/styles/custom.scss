@@ -38,13 +38,13 @@ a.internal:hover, a.external:hover {
 }
 
 /* 只给搜索框下面加一大段空白 */
-.search {
-  margin-bottom: 5rem; /* 这里的数字随便调 */
-}
+//.search {
+ // margin-bottom: 5rem; /* 这里的数字随便调 */
+//}
 /* 给搜索框头顶加一段留白 */
-.search {
-  margin-top: 2rem;  /* 这里填你想要的距离，比如 3rem, 5rem, 8rem */
-}
+//.search {
+  //margin-top: 2rem;  /* 这里填你想要的距离，比如 3rem, 5rem, 8rem */
+//}
 
 /* =========================================================
    V7.0 终极救急：拆除 Grid 牢笼，强制全屏居中
@@ -53,6 +53,28 @@ a.internal:hover, a.external:hover {
 /* 桌面端布局逻辑 (屏幕宽于 800px 时生效) */
 @media (min-width: 800px) {
 
+  /* 2.1 强制 Body 全屏居中 */
+  body, #quartz-root, .page {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+  }
+
+  /* 2.2 Header 置顶布局 (搜索框 + 标题) */
+  header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin-top: 2rem !important; /* 顶部留白，和按钮对齐 */
+    margin-bottom: 2rem !important;
+    gap: 0.5rem !important;
+  }
   /* 1. 拆除牢笼：强制 body 和 page 占满整个视口 */
   body, 
   #quartz-root,
