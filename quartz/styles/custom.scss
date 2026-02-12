@@ -47,70 +47,86 @@ a.internal:hover, a.external:hover {
 }
 
 /* =========================================================
-   暴力重构：无色亚克力抽屉特效 (Ghost Drawer)
+   V2.1 终极版：宽屏正文 + 重度无色毛玻璃 (Frosty Glass)
    ========================================================= */
 
-/* 只在桌面端生效，防止破坏手机端布局 */
+/* 只在桌面端生效 */
 @media (min-width: 1000px) {
   
-  /* 1. 强制打破 Grid 布局，变成悬浮面板 */
+  /* --- 1. 侧边栏：重度毛玻璃 --- */
   .sidebar.left, .sidebar.right {
-    position: fixed !important; /* 必须加 important 覆盖默认布局 */
+    position: fixed !important;
     top: 0;
     height: 100vh !important;
-    width: 350px !important; /* 抽屉稍微宽一点 */
-    z-index: 1500 !important; /* 层级要高，但别盖过按钮(2000) */
-    padding: 2rem !important;
+    width: 380px !important; /* 稍微再宽一点，甚至可以遮住半个屏幕 */
+    z-index: 1500 !important;
+    padding: 3rem 2rem !important; /* 内容稍微往里缩一点 */
     overflow-y: auto;
     transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
     
-    /* 🎨 视觉：无色透明毛玻璃 */
-    background-color: rgba(255, 255, 255, 0.1) !important; /* 只有10%的白色 */
-    backdrop-filter: blur(25px) !important; /* 强力磨砂 */
-    -webkit-backdrop-filter: blur(25px) !important;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1) !important; /* 轻微阴影显出轮廓 */
-    border: 1px solid rgba(255, 255, 255, 0.2) !important; /* 玻璃边缘光泽 */
+    /* 🎨 核心：无色亚克力特效参数 */
+    /* 背景：40% 不透明度的纯白，增加玻璃的“厚度感” */
+    background-color: rgba(255, 255, 255, 0.4) !important; 
+    /* 模糊：50px 深度模糊，看不清后面的字 */
+    backdrop-filter: blur(50px) saturate(180%) !important; 
+    -webkit-backdrop-filter: blur(50px) saturate(180%) !important;
+    
+    /* 边框和阴影：增强立体感 */
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.6) !important;
   }
 
-  /* 2. 初始状态：移出屏幕 */
+  /* 初始状态：移出屏幕 */
   .sidebar.left {
     left: 0;
-    transform: translateX(-110%); /* 向左平移隐藏 */
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    transform: translateX(-110%);
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
   }
 
   .sidebar.right {
     right: 0;
-    transform: translateX(110%); /* 向右平移隐藏 */
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    transform: translateX(110%);
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
   }
 
-  /* 3. 激活状态：滑回来 */
+  /* 激活状态：滑回来 */
   body.show-left-sidebar .sidebar.left {
-    transform: translateX(0) !important; /* 回归原位 */
+    transform: translateX(0) !important;
   }
 
   body.show-right-sidebar .sidebar.right {
-    transform: translateX(0) !important; /* 回归原位 */
+    transform: translateX(0) !important;
   }
 
-  /* 4. 正文布局修正：因为侧边栏悬浮了，正文需要居中 */
+  /* --- 2. 正文：宽屏解放 --- */
   .page {
-    margin: 0 auto !important;
-    max-width: 900px !important; /* 限制正文最大宽度，提升阅读感 */
     width: 100% !important;
-    display: block !important; /* 破坏原本的 grid */
+    display: flex !important;
+    justify-content: center !important; /* 强制居中 */
+    margin: 0 !important;
   }
   
   .center {
     margin: 0 auto !important;
+    /* 关键修改：用 vw (视口宽度) 来定宽 */
+    width: 80vw !important; 
+    max-width: 1400px !important; /* 上限设得很大，保证大屏也很宽 */
+    min-width: 600px !important; /* 保证不被压得太小 */
     padding: 0 2rem !important;
+  }
+  
+  /* 修复：因为正文变宽了，顶部的 Flex 栏可能需要重新对齐 */
+  .page > .flex-container {
+      width: 80vw !important;
+      max-width: 1400px !important;
+      margin: 0 auto !important;
   }
 }
 
-/* 隐藏原本桌面端可能出现的布局错位 */
-.sidebar {
-    /* 确保里面的文字清楚 */
-    color: var(--darkgray); 
+/* 移动端保护：防止手机上正文也被撑爆 */
+@media (max-width: 999px) {
+    .center {
+        width: 100% !important;
+        padding: 0 1rem !important;
+    }
 }
-
