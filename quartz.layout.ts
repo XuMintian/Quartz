@@ -27,11 +27,6 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   left: [
     Component.PageTitle(),
-    Component.MobileOnly(Component.Spacer()),
-    Component.Explorer(),
-    
-  ],
-  right: [
     Component.Flex({
       components: [
         {
@@ -39,8 +34,15 @@ export const defaultContentPageLayout: PageLayout = {
           grow: true,
         },
         { Component: Component.Darkmode() },
+        //{ Component: Component.ReaderMode() },
       ],
     }),
+    Component.MobileOnly(Component.Spacer()),
+    Component.Explorer(),
+    
+  ],
+  right: [
+    
     Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),

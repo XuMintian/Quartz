@@ -36,3 +36,8 @@ a.internal:hover, a.external:hover {
 ::-webkit-scrollbar-thumb:hover {
   background: #ec407a; /* 鼠标按住时变深粉色 */
 }
+
+/* 增大左侧边栏组件的间距 */
+.left.sidebar {
+  gap: 8rem;  /* 默认大概是 2rem。你可以改大这个数字，比如 3rem, 5rem */
+}
