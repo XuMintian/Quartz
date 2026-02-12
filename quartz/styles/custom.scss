@@ -130,6 +130,15 @@ a.internal:hover, a.external:hover {
     .sidebar-buttons-container { display: none !important; }
 }
 
+/* === 修复按钮点击问题 === */
+.sidebar-btn {
+  /* ... 之前的其他样式保持不变 ... */
+  
+  /* 关键修改：让它比侧边栏(9999)还高！ */
+  z-index: 10001 !important; 
+}
+
+
 /* === 侧边栏滚动条美化 === */
 .sidebar.left::-webkit-scrollbar,
 .sidebar.right::-webkit-scrollbar {
