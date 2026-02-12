@@ -184,29 +184,65 @@ a.internal:hover, a.external:hover {
 /* === 搜索框与标题置顶微调 === */
 @media (min-width: 800px) {
   
-  /* 1. Header 容器：去掉多余内边距，强制向上对齐 */
+  /* 1. 强制 Header 脱离文档流，固定在视口顶部 */
   header {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100vw !important;
+    z-index: 10000 !important;
+    
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    
+    /* 👇 内边距 */
+    padding: 1rem 0 !important;
+    gap: 0.8rem !important;
+    
+    /* 👇 背景 */
+    background-color: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
+    
+    /* 👇 关键！强制脱离 flex 布局 */
+    margin: 0 !important;
+    flex-shrink: 0 !important;
+  }
   
-  /* 👇 改这里！减小顶部距离，让搜索框更靠上 */
-  margin-top: 0.5rem !important;  // 原来是 1.5rem，改小点
-  margin-bottom: 3rem !important; // 原来是 2rem，加大和正文的距离
-  gap: 1.2rem !important; // 原来是 0.5rem，加大搜索框和标题的距离
-}
-
-  /* 2. 搜索框：宽度调整 */
-  .search {
-    width: 100% !important;
-    max-width: 700px !important; /* 你想要的“很长” */
-    margin: 0 !important; /* 没有任何外边距，完全听 header 指挥 */
+  /* 2. 确保 header 不受父元素影响 */
+  .page > header,
+  #quartz-root > header,
+  body > header {
+    position: fixed !important;
   }
 
-  /* 3. 搜索框内部微调 (让它看起来和按钮风格一致) */
+  /* 3. 给 center（正文区域）加上顶部留白，防止被遮挡 */
+  .center {
+    margin-top: 100px !important; /* 👈 给 header 留出空间 */
+    padding-top: 2rem !important; /* 👈 额外的留白 */
+  }
+
+  /* 4. 搜索框样式 */
+  .search {
+    width: 100% !important;
+    max-width: 700px !important;
+    margin: 0 !important;
+  }
+
   .search-button {
-    background-color: rgba(255, 255, 255, 0.5); /* 稍微透明一点 */
-    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(5px) !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  }
+  
+  /* 5. 标题样式 */
+  header .page-title {
+    margin: 0 !important;
   }
 }
 
