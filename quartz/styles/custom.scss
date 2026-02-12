@@ -244,6 +244,16 @@ a.internal:hover, a.external:hover {
   header .page-title {
     margin: 0 !important;
   }
+  /* 额外保险：确保 header 绝对固定 */
+  header {
+    transform: translateZ(0) !important; /* 开启硬件加速 */
+    will-change: transform !important;
+  }
+  
+  /* 防止 header 被 page 的滚动影响 */
+  .page {
+    overflow: visible !important;
+  }
 }
 
 /* 预览框内隐藏侧边栏和按钮 */
