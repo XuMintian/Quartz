@@ -14,6 +14,7 @@ export const sharedPageComponents: SharedLayout = {
     links: {
       GitHub: "https://github.com/XuMintian",
     },
+    
   }),
 }
 
