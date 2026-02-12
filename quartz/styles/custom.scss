@@ -47,88 +47,85 @@ a.internal:hover, a.external:hover {
 }
 
 /* =========================================================
-   V5.0 核弹版：从 Body 层级强制居中 (Grid Killer)
+   V7.0 终极救急：拆除 Grid 牢笼，强制全屏居中
    ========================================================= */
 
-@media (min-width: 1000px) {
+/* 桌面端布局逻辑 (屏幕宽于 800px 时生效) */
+@media (min-width: 800px) {
 
-  /* --- Part 1: 地基重造 (核心中的核心) --- */
-  /* 直接控制 body，让它变成一个专门居中内容的容器 */
-  body {
+  /* 1. 拆除牢笼：强制 body 和 page 占满整个视口 */
+  body, 
+  #quartz-root,
+  .page {
+    width: 100vw !important; /* 强制占满屏幕宽度 */
+    max-width: 100vw !important;
     display: flex !important;
     flex-direction: column !important;
-    align-items: center !important; /* 👈 命令所有子元素水平居中 */
-    width: 100% !important;
-    min-height: 100vh !important;
-    overflow-x: hidden !important; /* 防止左右出现滚动条 */
-  }
-
-  /* --- Part 2: 页面容器 (.page) --- */
-  /* 它是正文和标题的包裹层 */
-  .page {
-    /* 彻底废除原本的 Grid，变成普通的盒子 */
-    display: block !important; 
-    
-    /* 宽度控制：这里决定了你的文章有多宽 */
-    width: 100% !important;
-    max-width: 1100px !important; /* 👈 你想要的宽屏！比官方的宽，但又聚拢 */
-    
-    /* 强制自身居中 (双重保险) */
-    margin-left: auto !important;
-    margin-right: auto !important;
-    padding: 0 !important;
-  }
-
-  /* --- Part 3: 正文区域 (.center) --- */
-  .center {
-    display: block !important;
-    width: 100% !important;
-    max-width: 100% !important; /* 撑满 .page 的宽度 */
+    align-items: center !important; /* 👈 这是关键：让子元素强制水平居中 */
     margin: 0 !important;
-    padding: 4rem 2rem !important; /* 上下多留白，看起来呼吸感强 */
+    padding: 0 !important;
+    overflow-x: hidden !important; /* 防止横向滚动条 */
+  }
+
+  /* 2. 重建正文：宽屏且居中 */
+  .center {
+    /* 不用 margin auto 了，靠父元素 align-items 居中 */
+    display: block !important;
+    
+    /* 宽度控制：占据屏幕的 70% ~ 80%，视觉上最舒服 */
+    width: 75% !important; 
+    min-width: 800px !important; /* 保证最小不低于这个宽 */
+    max-width: 1400px !important; /* 保证最大不过宽 */
+    
+    padding: 4rem 2rem !important;
     box-sizing: border-box !important;
+    
+    /* 确保文字不会贴边 */
+    margin: 0 !important; 
   }
   
-  /* 标题栏也要撑满 */
+  /* 3. 顶部 Flex 栏也要对齐 */
   .page > .flex-container {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
+    width: 75% !important;
+    min-width: 800px !important;
+    max-width: 1400px !important;
+    display: flex !important;
     justify-content: space-between !important;
+    margin: 0 !important;
   }
 
-  /* --- Part 4: 你的心头好 - 亚克力侧边栏 --- */
+  /* --- 4. 侧边栏装修 (亚克力抽屉) --- */
   .sidebar.left, .sidebar.right {
     position: fixed !important;
     top: 0;
     height: 100vh !important;
-    width: 360px !important;
-    z-index: 1500 !important;
+    width: 380px !important;
+    z-index: 9999 !important;
     padding: 3rem 2rem !important;
     overflow-y: auto;
-    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
     
-    /* 🎨 苹果味儿亚克力 */
+    /* 亚克力效果 */
     background-color: rgba(255, 255, 255, 0.65) !important; 
-    backdrop-filter: blur(40px) saturate(180%) !important; 
-    -webkit-backdrop-filter: blur(40px) saturate(180%) !important;
-    border-right: 1px solid rgba(255, 255, 255, 0.4) !important; 
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15) !important;
+    backdrop-filter: blur(30px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(30px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1) !important;
+    
+    transition: transform 0.4s ease !important;
   }
   
-  .sidebar.right {
-    border-right: none !important;
-    border-left: 1px solid rgba(255, 255, 255, 0.4) !important;
-  }
-
-  /* 抽屉逻辑 */
+  /* 初始隐藏 */
   .sidebar.left { left: 0; transform: translateX(-120%); }
   .sidebar.right { right: 0; transform: translateX(120%); }
+  
+  /* 激活显示 */
   body.show-left-sidebar .sidebar.left { transform: translateX(0) !important; }
   body.show-right-sidebar .sidebar.right { transform: translateX(0) !important; }
 }
 
-/* 移动端保持原样，不要动它 */
-@media (max-width: 999px) {
+/* --- 移动端保护 (800px以下) --- */
+@media (max-width: 799px) {
+    .page, body { display: block !important; width: 100% !important; }
     .center { width: 100% !important; padding: 0 1rem !important; }
+    .sidebar-buttons-container { display: none !important; }
 }
