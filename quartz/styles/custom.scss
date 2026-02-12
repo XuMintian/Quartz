@@ -39,6 +39,15 @@ a.internal:hover, a.external:hover {
 
 /* 只给搜索框下面加一大段空白 */
 .search {
-  margin-bottom: 3rem; /* 这里的数字随便调 */
+  margin-bottom: 5rem; /* 这里的数字随便调 */
+}
+/* 给搜索框头顶加一段留白 */
+.search {
+  margin-top: 2rem;  /* 这里填你想要的距离，比如 3rem, 5rem, 8rem */
+}
+
+/* 让右侧边栏整体下沉 */
+.right.sidebar {
+  padding-top: 9rem; /* 整个右边栏往下压 6rem */
 }
 
