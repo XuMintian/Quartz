@@ -47,12 +47,57 @@ a.internal:hover, a.external:hover {
 }
 
 /* =========================================================
-   V3.2：绝对居中 (Flexbox) + 苹果级通透毛玻璃
+   V5.0 核弹版：从 Body 层级强制居中 (Grid Killer)
    ========================================================= */
 
 @media (min-width: 1000px) {
+
+  /* --- Part 1: 地基重造 (核心中的核心) --- */
+  /* 直接控制 body，让它变成一个专门居中内容的容器 */
+  body {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important; /* 👈 命令所有子元素水平居中 */
+    width: 100% !important;
+    min-height: 100vh !important;
+    overflow-x: hidden !important; /* 防止左右出现滚动条 */
+  }
+
+  /* --- Part 2: 页面容器 (.page) --- */
+  /* 它是正文和标题的包裹层 */
+  .page {
+    /* 彻底废除原本的 Grid，变成普通的盒子 */
+    display: block !important; 
+    
+    /* 宽度控制：这里决定了你的文章有多宽 */
+    width: 100% !important;
+    max-width: 1100px !important; /* 👈 你想要的宽屏！比官方的宽，但又聚拢 */
+    
+    /* 强制自身居中 (双重保险) */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 0 !important;
+  }
+
+  /* --- Part 3: 正文区域 (.center) --- */
+  .center {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important; /* 撑满 .page 的宽度 */
+    margin: 0 !important;
+    padding: 4rem 2rem !important; /* 上下多留白，看起来呼吸感强 */
+    box-sizing: border-box !important;
+  }
   
-  /* --- 1. 侧边栏：苹果味儿毛玻璃 (Frosty & Vibrant) --- */
+  /* 标题栏也要撑满 */
+  .page > .flex-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    justify-content: space-between !important;
+  }
+
+  /* --- Part 4: 你的心头好 - 亚克力侧边栏 --- */
   .sidebar.left, .sidebar.right {
     position: fixed !important;
     top: 0;
@@ -63,71 +108,27 @@ a.internal:hover, a.external:hover {
     overflow-y: auto;
     transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
     
-    /* 🎨 核心配方调整：更透、更亮、更糊 */
-    /* 1. 背景：降低白色的浓度 (0.55)，让背景色透过来更多，增加通透感 */
-    background-color: rgba(255, 255, 255, 0.55) !important; 
-    
-    /* 2. 模糊：40px 强力模糊，把字彻底糊掉 */
-    /* 3. 饱和度 (saturate)：提升到 200%，这是“高级感”的关键，让透过来的颜色更鲜艳 */
-    backdrop-filter: blur(40px) saturate(200%) !important; 
-    -webkit-backdrop-filter: blur(40px) saturate(200%) !important;
-    
-    /* 4. 边框：用半透明白线勾勒轮廓 */
+    /* 🎨 苹果味儿亚克力 */
+    background-color: rgba(255, 255, 255, 0.65) !important; 
+    backdrop-filter: blur(40px) saturate(180%) !important; 
+    -webkit-backdrop-filter: blur(40px) saturate(180%) !important;
     border-right: 1px solid rgba(255, 255, 255, 0.4) !important; 
-    
-    /* 5. 阴影：柔和的大阴影，增加层次 */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15) !important;
   }
   
-  /* 右侧边栏微调 */
   .sidebar.right {
     border-right: none !important;
     border-left: 1px solid rgba(255, 255, 255, 0.4) !important;
   }
 
-  /* 初始隐藏状态 */
+  /* 抽屉逻辑 */
   .sidebar.left { left: 0; transform: translateX(-120%); }
   .sidebar.right { right: 0; transform: translateX(120%); }
-
-  /* 激活状态 */
   body.show-left-sidebar .sidebar.left { transform: translateX(0) !important; }
   body.show-right-sidebar .sidebar.right { transform: translateX(0) !important; }
-
-
-  /* --- 2. 正文：Flexbox 强力纠正左倾 --- */
-  
-  /* 第一级容器 (.page)：变成弹性盒子，专门负责把孩子居中 */
-  .page {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important; /* 👈 核心：水平方向绝对居中 */
-    width: 100% !important;
-    margin: 0 !important;
-    position: relative !important;
-  }
-  
-  /* 第二级容器 (.center)：负责控制宽度 */
-  .center {
-    display: block !important;
-    margin: 0 !important; /* 不需要 margin auto 了，父级已经居中了 */
-    
-    /* 📏 宽度控制：宽敞大气 */
-    width: 80% !important; /* 屏幕宽度的 80% */
-    max-width: 1400px !important; /* 加上一个上限，防止在超宽带鱼屏上太散 */
-    min-width: 600px !important;
-    
-    padding: 3rem 0 !important;
-  }
-  
-  /* 顶部 Flex 栏对齐修正 */
-  .page > .flex-container {
-      width: 80% !important;
-      max-width: 1400px !important;
-      margin: 0 !important; /* 同样靠父级居中 */
-  }
 }
 
-/* 移动端保持原样 */
+/* 移动端保持原样，不要动它 */
 @media (max-width: 999px) {
     .center { width: 100% !important; padding: 0 1rem !important; }
 }
