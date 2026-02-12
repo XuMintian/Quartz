@@ -25,19 +25,20 @@ a.internal:hover, a.external:hover {
 }
 
 ::-webkit-scrollbar-track {
-  background: #fff; /* 轨道背景白色 */
+  background: #fff5f5; /* 轨道背景白色 */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #f48fb1; /* 滚动条本体：粉色 */
+  background: #ffc9db; /* 滚动条本体：粉色 */
   border-radius: 4px; /* 圆角看起来更可爱 */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ec407a; /* 鼠标按住时变深粉色 */
+  background: #fd92b5; /* 鼠标按住时变深粉色 */
 }
 
 /* 只给搜索框下面加一大段空白 */
 .search {
   margin-bottom: 3rem; /* 这里的数字随便调 */
 }
+
