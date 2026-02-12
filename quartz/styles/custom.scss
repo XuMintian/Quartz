@@ -66,15 +66,7 @@ a.internal:hover, a.external:hover {
   }
 
   /* 2.2 Header 置顶布局 (搜索框 + 标题) */
-  header {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    width: 100% !important;
-    margin-top: 2rem !important; /* 顶部留白，和按钮对齐 */
-    margin-bottom: 2rem !important;
-    gap: 0.5rem !important;
-  }
+  
   /* 1. 拆除牢笼：强制 body 和 page 占满整个视口 */
   body, 
   #quartz-root,
@@ -194,15 +186,15 @@ a.internal:hover, a.external:hover {
   
   /* 1. Header 容器：去掉多余内边距，强制向上对齐 */
   header {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    
-    /* 👇 关键：留出和按钮(20px)差不多的距离，让第一排文字/框框对齐按钮 */
-    margin-top: 1.5rem !important; 
-    margin-bottom: 2rem !important; /* 和下面正文拉开点距离 */
-    gap: 0.5rem; /* 搜索框和标题之间的缝隙 */
-  }
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  
+  /* 👇 改这里！减小顶部距离，让搜索框更靠上 */
+  margin-top: 0.5rem !important;  // 原来是 1.5rem，改小点
+  margin-bottom: 3rem !important; // 原来是 2rem，加大和正文的距离
+  gap: 1rem !important; // 原来是 0.5rem，加大搜索框和标题的距离
+}
 
   /* 2. 搜索框：宽度调整 */
   .search {
@@ -216,4 +208,10 @@ a.internal:hover, a.external:hover {
     background-color: rgba(255, 255, 255, 0.5); /* 稍微透明一点 */
     backdrop-filter: blur(5px);
   }
+}
+
+/* 预览框内隐藏侧边栏 */
+.popover-hint .sidebar.left,
+.popover-hint .sidebar.right {
+  display: none !important;
 }
