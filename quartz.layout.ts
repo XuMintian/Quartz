@@ -20,6 +20,11 @@ export const sharedPageComponents: SharedLayout = {
 
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
+  // 👇 修改 header：把搜索和标题放这里
+  header: [
+    Component.Search(),    
+    Component.PageTitle(), 
+  ],
   beforeBody: [
     Component.SidebarButtons(), // 👈 新加的，放在最上面
     Component.ConditionalRender({
@@ -58,6 +63,11 @@ export const defaultContentPageLayout: PageLayout = {
 
 // components for pages that display lists of pages  (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
+  // 👇 同样修改 header
+  header: [
+    Component.Search(),    
+    Component.PageTitle(), 
+  ],
   beforeBody: [
     Component.SidebarButtons(),
     Component.Breadcrumbs(), 
@@ -69,10 +79,10 @@ export const defaultListPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Flex({
       components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
+       //{
+          //Component: Component.Search(),
+          //grow: true,
+        //},
         { Component: Component.Darkmode() },
       ],
     }),
