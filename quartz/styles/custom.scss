@@ -46,5 +46,73 @@ a.internal:hover, a.external:hover {
   margin-top: 2rem;  /* 这里填你想要的距离，比如 3rem, 5rem, 8rem */
 }
 
+/* =========================================================
+   亚克力抽屉特效 (Acrylic Drawer Effect)
+   ========================================================= */
 
+/* 1. 先把原本的侧边栏变成“悬浮抽屉”模式 */
+@media (min-width: 1000px) { /* 只在桌面端生效，手机端保持原样 */
+  
+  /* 左侧边栏：初始状态藏在左边屏幕外 */
+  .left.sidebar {
+    position: fixed; /* 悬浮固定 */
+    top: 0;
+    left: -320px; /* 藏在左边外面 */
+    width: 300px; /* 抽屉宽度 */
+    height: 100vh; /* 占满全屏高度 */
+    z-index: 999; /* 必须在最上层 */
+    padding: 2rem;
+    overflow-y: auto;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* 平滑动画 */
+    
+    /* 亚克力玻璃特效 (这里用了你的粉色背景变量) */
+    background-color: rgba(255, 240, 245, 0.6) !important; 
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.05);
+  }
+
+  /* 右侧边栏：初始状态藏在右边屏幕外 */
+  .right.sidebar {
+    position: fixed;
+    top: 0;
+    right: -320px; /* 藏在右边外面 */
+    width: 300px;
+    height: 100vh;
+    z-index: 999;
+    padding: 2rem;
+    overflow-y: auto;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    
+    /* 亚克力玻璃特效 */
+    background-color: rgba(255, 240, 245, 0.6) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.05);
+  }
+
+  /* 2. 当点击按钮后，body 会多一个 class，这时把抽屉拉出来 */
+  body.show-left-sidebar .left.sidebar {
+    left: 0; /* 回到屏幕可见区域 */
+  }
+
+  body.show-right-sidebar .right.sidebar {
+    right: 0; /* 回到屏幕可见区域 */
+  }
+
+  /* 3. 既然侧边栏悬浮了，中间的正文就要居中，并且不需要留出两边的空位 */
+  .center {
+    margin: 0 auto !important;
+    max-width: 800px; /* 限制一下正文最大宽度，更像阅读模式 */
+  }
+}
+
+/* 隐藏原本桌面端的“幽灵占位符”，否则布局会乱 */
+@media (min-width: 1200px) {
+    .page {
+        grid-template-columns: 1fr !important; /* 强制变成单栏布局 */
+    }
+}
 

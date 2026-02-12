@@ -1,8 +1,8 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
-import style from "./styles/sidebarButtons.scss"
 
 export default (() => {
-  const SidebarButtons: QuartzComponent = (props: QuartzComponentProps) => {
+  // 修改点1：参数改成了 _props，消除未使用的警告
+  const SidebarButtons: QuartzComponent = (_props: QuartzComponentProps) => {
     return (
       <div class="sidebar-buttons">
         {/* 左侧按钮 */}
@@ -13,8 +13,6 @@ export default (() => {
             <line x1="3" y1="18" x2="21" y2="18"></line>
           </svg>
         </button>
-
-        {/* 中间留空，或者你可以放点别的 */}
         
         {/* 右侧按钮 */}
         <button id="right-sidebar-toggle" class="sidebar-btn" aria-label="Toggle Right Sidebar">
@@ -28,7 +26,6 @@ export default (() => {
     )
   }
 
-  // 这里的代码负责处理点击事件：给 body 加 class
   SidebarButtons.afterDOMLoaded = `
     const leftBtn = document.getElementById('left-sidebar-toggle')
     const rightBtn = document.getElementById('right-sidebar-toggle')
@@ -47,7 +44,6 @@ export default (() => {
     }
   `
   
-  // 这里写一点基础样式，让按钮漂亮点
   SidebarButtons.css = `
   .sidebar-buttons {
     display: flex;
@@ -55,6 +51,7 @@ export default (() => {
     width: 100%;
     padding: 0.5rem 1rem;
     pointer-events: none; /* 让中间区域不挡鼠标 */
+    z-index: 1000; /* 确保按钮在最上层 */
   }
   
   .sidebar-btn {
@@ -64,10 +61,13 @@ export default (() => {
     cursor: pointer;
     color: var(--darkgray);
     transition: transform 0.2s;
+    padding: 4px;
+    border-radius: 4px;
   }
   
   .sidebar-btn:hover {
     transform: scale(1.1);
+    background-color: var(--lightgray);
     color: var(--secondary);
   }
   `
