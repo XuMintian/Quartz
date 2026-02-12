@@ -62,7 +62,7 @@ a.internal:hover, a.external:hover {
     align-items: center !important;
     margin: 0 !important;
     padding: 0 !important;
-    overflow-x: hidden !important;
+    overflow-x: auto !important;
   }
 
   /* 2.2 Header 置顶布局 (搜索框 + 标题) */
@@ -211,4 +211,63 @@ a.internal:hover, a.external:hover {
 .popover .sidebar.right,
 .popover .sidebar-buttons-container {
   display: none !important;
+}
+/* =========================================================
+   完整修复方案
+   ========================================================= */
+
+@media (min-width: 800px) {
+  
+  /* 1. 强制 header 在页面最顶部 */
+  header {
+    order: -1 !important; /* 确保它排在最前面 */
+    margin-top: 0 !important;
+    padding-top: 1.5rem !important;
+    margin-bottom: 3rem !important; /* 增加和正文的距离 */
+    gap: 1rem !important;
+  }
+  
+  /* 2. 给正文区域加上顶部空白 */
+  .center {
+    padding-top: 2rem !important; /* 减少顶部padding，因为header已经有margin了 */
+  }
+  
+  /* 3. 启用横向滚动 */
+  body {
+    overflow-x: auto !important; /* 允许左右滚动 */
+  }
+  
+  /* 美化横向滚动条 */
+  body::-webkit-scrollbar {
+    height: 10px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #fff5f5;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: #ffc9db;
+    border-radius: 5px;
+  }
+  
+  body::-webkit-scrollbar-thumb:hover {
+    background: #fd92b5;
+  }
+}
+
+/* 4. 修复预览框问题：让鼠标可以停留 */
+.popover {
+  pointer-events: auto !important; /* 关键：让预览框可以接收鼠标事件 */
+  z-index: 10003 !important; /* 确保在最上层 */
+}
+
+.popover-inner {
+  pointer-events: auto !important;
+}
+
+/* 5. 预览框内容样式优化 */
+.popover .popover-hint {
+  max-height: 400px;
+  overflow-y: auto;
 }

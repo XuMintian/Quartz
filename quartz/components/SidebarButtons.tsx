@@ -25,7 +25,7 @@ export default (() => {
 
   // 👇 核心修改：封装成函数，并监听 'nav' 事件
 SidebarButtons.afterDOMLoaded = `
-    // 👇 把点击空白关闭放到函数外面,只绑定一次
+    // 点击空白关闭（只绑定一次）
     document.addEventListener('click', (e) => {
       const target = e.target;
       if (!target.closest('.sidebar') && !target.closest('.sidebar-btn')) {
@@ -39,18 +39,14 @@ SidebarButtons.afterDOMLoaded = `
       const rightBtn = document.getElementById('right-sidebar-toggle')
       const body = document.body
 
-      // 绑定左侧
       if (leftBtn) {
-        leftBtn.onclick = null; 
         leftBtn.onclick = (e) => {
           e.stopPropagation(); 
           body.classList.toggle('show-left-sidebar')
         }
       }
       
-      // 绑定右侧
       if (rightBtn) {
-        rightBtn.onclick = null;
         rightBtn.onclick = (e) => {
           e.stopPropagation();
           body.classList.toggle('show-right-sidebar')
@@ -58,11 +54,13 @@ SidebarButtons.afterDOMLoaded = `
       }
     }
 
-    // 1. 页面初次加载时运行
+    // 初次加载
     initSidebarButtons()
 
-    // 2. ⚠️ 关键:每次 SPA 跳转结束时,重新运行!
-    window.addEventListener('nav', initSidebarButtons)
+    // 每次页面导航后重新绑定
+    window.addEventListener('nav', () => {
+      initSidebarButtons()
+    })
   `
   
   SidebarButtons.css = `
@@ -75,7 +73,7 @@ SidebarButtons.afterDOMLoaded = `
   }
   .sidebar-btn {
       pointer-events: auto;
-      position: fixed; top: 20px;
+      position: fixed; top: 1.5rem;
       z-index: 10002 !important;
       background: rgba(255, 255, 255, 0.8);
       backdrop-filter: blur(5px);
