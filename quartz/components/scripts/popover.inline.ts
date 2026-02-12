@@ -151,8 +151,7 @@ document.addEventListener("nav", () => {
     
     window.addCleanup(() => {
       link.removeEventListener("mouseenter", mouseEnterHandler)
-      // 原来的:
-link.addEventListener("mouseleave", clearActivePopover)
+
 
 // 改成:
 link.addEventListener("mouseleave", () => {
