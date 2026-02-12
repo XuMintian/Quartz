@@ -3,12 +3,15 @@ import * as Component from "./quartz/components"
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
-  head: Component.Head(),
+  
   header: [
-    Component.PageTitle(), 
-    Component.Spacer(), 
+    
+    Component.Search(),  
+    Component.PageTitle(),
+    Component.Spacer(),    // 弹簧，把夜间模式推向右边
     Component.Darkmode(),
   ],
+  head: Component.Head(),
   afterBody: [],
   footer: Component.Footer({
     links: {
@@ -32,17 +35,16 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   left: [
     Component.PageTitle(),
-    Component.DesktopOnly(Component.Search()), // 👈 搜索框回到了左边
-    Component.Flex({
-      components: [
+   // Component.Flex({
+      //components: [
         //{
           //Component: Component.Search(),
           //grow: true,
         //},
-        { Component: Component.Darkmode() },
+        //{ Component: Component.Darkmode() },
         //{ Component: Component.ReaderMode() },
-      ],
-    }),
+      //],
+    //}),
     Component.MobileOnly(Component.Spacer()),
     Component.Explorer({
   title: "我的知识库", // 👈 在这里改！想叫什么叫什么，比如 "Knowledge" 或 "Recent Writing"
