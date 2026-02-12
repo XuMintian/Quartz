@@ -24,7 +24,16 @@ export default (() => {
   }
 
   // 👇 核心修改：封装成函数，并监听 'nav' 事件
-  SidebarButtons.afterDOMLoaded = `
+SidebarButtons.afterDOMLoaded = `
+    // 👇 把点击空白关闭放到函数外面,只绑定一次
+    document.addEventListener('click', (e) => {
+      const target = e.target;
+      if (!target.closest('.sidebar') && !target.closest('.sidebar-btn')) {
+         document.body.classList.remove('show-left-sidebar');
+         document.body.classList.remove('show-right-sidebar');
+      }
+    })
+
     function initSidebarButtons() {
       const leftBtn = document.getElementById('left-sidebar-toggle')
       const rightBtn = document.getElementById('right-sidebar-toggle')
@@ -32,7 +41,6 @@ export default (() => {
 
       // 绑定左侧
       if (leftBtn) {
-        // 先移除旧事件防止重复(虽非必须但保险)
         leftBtn.onclick = null; 
         leftBtn.onclick = (e) => {
           e.stopPropagation(); 
@@ -48,23 +56,12 @@ export default (() => {
           body.classList.toggle('show-right-sidebar')
         }
       }
-      
-      // 点击空白关闭 (可选，增强体验)
-      // 改成这样(删除第55-63行,替换成):
-      // 点击空白关闭 (可选,增强体验)
-        document.addEventListener('click', (e) => {
-          const target = e.target;
-          if (!target.closest('.sidebar') && !target.closest('.sidebar-btn')) {
-            body.classList.remove('show-left-sidebar');
-            body.classList.remove('show-right-sidebar');
-          }
-        })  // ✅ 去掉 { once: true },让它一直生效// 只绑一次或者在每次nav里处理，这里简单处理即可
     }
 
     // 1. 页面初次加载时运行
     initSidebarButtons()
 
-    // 2. ⚠️ 关键：每次 SPA 跳转结束时，重新运行！
+    // 2. ⚠️ 关键:每次 SPA 跳转结束时,重新运行!
     window.addEventListener('nav', initSidebarButtons)
   `
   
