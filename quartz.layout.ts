@@ -17,6 +17,7 @@ export const sharedPageComponents: SharedLayout = {
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
+    Component.Search(),
     Component.SidebarButtons(), // 👈 新加的，放在最上面
     Component.ConditionalRender({
       component: Component.Breadcrumbs(),
@@ -30,16 +31,18 @@ export const defaultContentPageLayout: PageLayout = {
     Component.PageTitle(),
     Component.Flex({
       components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
+        //{
+          //Component: Component.Search(),
+          //grow: true,
+        //},
         { Component: Component.Darkmode() },
         //{ Component: Component.ReaderMode() },
       ],
     }),
     Component.MobileOnly(Component.Spacer()),
-    Component.Explorer(),
+    Component.Explorer({
+  title: "我的知识库", // 👈 在这里改！想叫什么叫什么，比如 "Knowledge" 或 "Recent Writing"
+}),
     
   ],
   right: [
