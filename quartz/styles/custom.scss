@@ -66,9 +66,9 @@ a.internal:hover, a.external:hover {
     
     /* 🎨 核心：无色亚克力特效参数 */
     /* 背景：40% 不透明度的纯白，增加玻璃的“厚度感” */
-    background-color: rgba(255, 255, 255, 0.4) !important; 
+    background-color: rgba(255, 251, 253, 0.674) !important; 
     /* 模糊：50px 深度模糊，看不清后面的字 */
-    backdrop-filter: blur(50px) saturate(180%) !important; 
+    backdrop-filter: blur(90px) saturate(200%) !important; 
     -webkit-backdrop-filter: blur(50px) saturate(180%) !important;
     
     /* 边框和阴影：增强立体感 */
