@@ -162,3 +162,38 @@ a.internal:hover, a.external:hover {
 .sidebar.right::-webkit-scrollbar-thumb:hover {
   background-color: rgba(0, 0, 0, 0.4);
 }
+
+/* =========================================================
+   V9.2 精修：搜索置顶拉长 + 标题对齐
+   ========================================================= */
+
+@media (min-width: 800px) {
+  /* 1. 让 Header 里的组件上下叠放并居中 */
+  header {
+    display: flex !important;
+    flex-direction: column !important; /* 强制上下排队 */
+    align-items: center !important;    /* 强制水平居中 */
+    width: 100% !important;
+    padding-top: 2rem !important;      /* 离房顶留点距离 */
+    gap: 0.5rem !important;            /* 搜索框和标题的间距 */
+  }
+
+  /* 2. 搜索框：扩展到很长 */
+  .search {
+    width: 100% !important;
+    max-width: 800px !important;       /* 👈 改这个数字可以控制它到底多长 */
+    margin: 0 !important;              /* 清除之前的边距干扰 */
+  }
+
+  /* 3. 标题：紧随其后，微调样式 */
+  .page-title {
+    margin: 0 !important;
+    font-size: 1.8rem !important;      /* 如果觉得标题太大/太小可以在这调 */
+  }
+}
+
+/* 顺便清理一下你之前可能留下的 search 边距代码，防止冲突 */
+.search {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
