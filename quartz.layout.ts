@@ -54,7 +54,7 @@ export const defaultContentPageLayout: PageLayout = {
     ),
     Component.MobileOnly(Component.Spacer()),
     Component.Explorer({
-              title: "🗺️ 导航 | navigation", 
+              title: "Navigation | 🗺️ 导航", 
               folderClickBehavior: "link",
               folderDefaultState: "open",
               useSavedState: false,
@@ -64,7 +64,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.RecentNotes(
       {
       
-      title: "✨ 最近更新 | Recently",
+      title: "Recently | ✨ 最近更新",
       limit: 3,
       filter: (f) => !f.slug?.startsWith("templates/"), // 过滤掉模板文件夹
     }),

@@ -21,7 +21,7 @@ aliases:
 
 * 💭 **[[Thoughts_index|Thoughts]]**: 碎片化的想法、灵感闪念或对历史（如唐朝、庄子）的随笔。
 
-1
+
 
 
 ---
