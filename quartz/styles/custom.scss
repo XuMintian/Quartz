@@ -275,82 +275,71 @@ a.internal:hover, a.external:hover {
 }
 
 /* =========================================================
-   方案：4个独立 Explorer 的专属样式
+   独立板块模式：保留 _index + 消灭三角 + 增加间距
    ========================================================= */
 
-/* 1. 每一个 Explorer 组件之间的间距 */
+/* 1. 每一个板块容器：去掉高度限制，允许完全展开 */
 .explorer {
-  margin-top: 0 !important;
-  margin-bottom: 3rem !important; /* 👈 这里控制四个大板块之间的距离 */
-  padding-bottom: 0 !important;
+  margin-bottom: 2.5rem !important; /* 板块之间的明显间距 */
+  max-height: none !important; 
+  height: auto !important;
+  border: none !important;
 }
 
-/* 最后一个不用留底边距 */
-.explorer:last-child {
-  margin-bottom: 0 !important;
+/* 2. 板块标题栏 (即 Studying, Projects 等文字所在行) */
+.explorer > button {
+  pointer-events: none !important; /* 彻底禁用点击折叠功能 */
+  cursor: default !important;
+  padding: 0 !important;
+  margin-bottom: 1rem !important;
+  display: flex !important;
+  align-items: center !important;
+  background: transparent !important;
+  border-bottom: 2px solid rgba(216, 27, 96, 0.15) !important; /* 粉色下划线 */
 }
 
-/* 2. 隐藏组件可能自带的 H2 空标题（防止占位） */
-.explorer h2 {
-  display: none !important;
+/* 3. 强力消灭标题旁边的蓝色/粉色三角箭头 */
+.explorer > button svg, 
+.explorer > button .lucide-chevron-down,
+.explorer > button .lucide-chevron-right {
+  display: none !important; 
 }
 
-/* 3. 核心：隐藏所有文件夹左侧的“三角箭头” */
-/* 这样看起来就不像能折叠的样子，纯粹像个列表 */
+/* 4. 标题文字美化 */
+.explorer > button h2 {
+  font-size: 1.4rem !important;
+  font-weight: 900 !important;
+  color: #d81b60 !important; /* 你的主题粉色 */
+  margin: 0 !important;
+  text-transform: uppercase;
+}
+
+/* 5. 内容列表：解决“太拥挤”的问题 */
+.explorer > #explorer-content {
+  max-height: none !important; /* 允许内容完全流出，不再缩在小盒子里 */
+  height: auto !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  padding-left: 0.5rem !important;
+}
+
+/* 6. 列表内的文件和文件夹 */
+.explorer ul {
+  list-style: none !important;
+  padding-left: 1rem !important;
+  margin: 0 !important;
+}
+
+/* 去掉列表中子文件夹的三角（可选，让整体更干净） */
 .explorer .folder-icon {
   display: none !important;
 }
 
-/* =========================================================
-   把根目录文件夹 (Studying, Projects...) 伪装成标题
-   ========================================================= */
-
-/* 选中每个 Explorer 里的第一个 li (也就是那个根文件夹) */
-.explorer > #explorer-content > ul > li > .folder-outer {
-  
-  /* A. 字体样式升级 */
-  font-size: 1.3rem !important;
-  font-weight: 800 !important;
-  color: #d81b60 !important; /* 粉色大标题 */
-  text-transform: uppercase; /* 变成大写，更有气势 */
-  letter-spacing: 0.05em;
-  
-  /* B. 增加底部下划线 */
-  border-bottom: 2px solid rgba(216, 27, 96, 0.15);
-  margin-bottom: 0.8rem;
-  padding-bottom: 0.4rem;
-  
-  /* C. 鼠标样式：改成默认指针，暗示“这是标题，别点我” */
-  cursor: default !important;
-}
-
-/* 防止点击标题触发背景色变化 */
-.explorer > #explorer-content > ul > li > .folder-outer:hover {
-  background-color: transparent !important;
-}
-
-/* 如果你还想保留点击跳转功能，但不想让他看起来像按钮 */
-.explorer > #explorer-content > ul > li > .folder-outer button {
-  pointer-events: auto !important;
-  text-align: left;
-}
-
-/* =========================================================
-   内容列表微调
-   ========================================================= */
-
-/* 修正因为去掉了箭头导致的左边距不对齐 */
-.explorer ul {
-  padding-left: 0.5rem !important;
-}
-
-/* 根文件夹下面的内容列表 (子文件) */
-.explorer > #explorer-content > ul > li > ul {
-  /* 强制显示，防止手贱折叠 */
-  display: block !important; 
-  
-  /* 左侧加一条细线，增加层次感 */
-  border-left: 2px solid rgba(0,0,0,0.05);
-  padding-left: 1rem !important;
-  margin-left: 0.2rem !important;
+/* 7. 全局侧边栏滚动条修复 */
+/* 确保左侧边栏作为一个整体可以垂直滚动 */
+.sidebar.left {
+  overflow-y: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  padding-bottom: 5rem !important; /* 底部留白，防止最后一个板块被遮挡 */
 }
