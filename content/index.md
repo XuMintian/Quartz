@@ -4,7 +4,6 @@ layout: folder
 aliases:
 cssclasses:
 tags:
-  - feature
 draft: false
 ---
 
