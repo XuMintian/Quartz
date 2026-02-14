@@ -49,7 +49,9 @@ export const defaultContentPageLayout: PageLayout = {
         //{ Component: Component.ReaderMode() },
       //],
     //}),
+    Component.DesktopOnly(
     Component.Darkmode(),
+    ),
     Component.MobileOnly(Component.Spacer()),
     Component.Explorer({
               title: "🗺️ 导航 | navigation", 
@@ -58,7 +60,7 @@ export const defaultContentPageLayout: PageLayout = {
               useSavedState: false,
               filterFn: (node:any) => node.name !== "Attachments"&&node.name !== "Inbox",   
             }),
-           
+    Component.DesktopOnly(       
     Component.RecentNotes(
       {
       
@@ -66,7 +68,7 @@ export const defaultContentPageLayout: PageLayout = {
       limit: 3,
       filter: (f) => !f.slug?.startsWith("templates/"), // 过滤掉模板文件夹
     }),
-  
+    )
   ],
   right: [
     
