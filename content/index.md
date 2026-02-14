@@ -9,22 +9,6 @@ aliases:
 你好！我是 **XuMintian**。
 一名 19 岁的**电子信息工程**在读大二学生（ZZU & UOW ）。
 
-
-
-
-> [!NOTE] Title
-> Contents
-
-
-> [!bug] Title
-> Contents
-
-
->[!quote]
->text
-
-
-
 ---
 
 ## 🗺️ Roadmap | 站点导航
@@ -32,8 +16,11 @@ aliases:
 你可以从这些入口开始探索：
 
 * 📝 **[[Studying_index|Studying]]**: 学习笔记，包含 CS 基础、英语词源积累等。
+* 
 * 🛠️ **[[Projects_index|Projects]]**: 1的个人项目与折腾记录（比如这个网站的搭建过程）。
+* 
 * 💭 **[[Thoughts_index|Thoughts]]**: 碎片化的想法、灵感闪念或对历史（如唐朝、庄子）的随笔。
+* 
 
 ---
 
