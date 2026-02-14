@@ -46,10 +46,16 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Darkmode(),
     Component.MobileOnly(Component.Spacer()),
     Component.Explorer({
-              title: "我的知识库", 
+              title: "", 
+              folderClickBehavior: "link",
               folderDefaultState: "open",
               useSavedState: false,
-              filterFn: (node:any) => node.name !== "Attachments"&&node.name !== "Inbox",
+              filterFn: (node) => {
+              // 排除掉不需要的 tags, endpoints 等
+              const omit = new Set(["tags", "Attachments", "Inbox", "hosting", "templates"])
+              return !omit.has(node.name)
+               },
+               
     }),
     
   ],
