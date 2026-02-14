@@ -46,33 +46,12 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Darkmode(),
     Component.MobileOnly(Component.Spacer()),
     Component.Explorer({
-              title: "📖 学习区 | Studying", 
+              title: "🗺️ 导航 | navigation", 
               folderClickBehavior: "link",
               folderDefaultState: "open",
               useSavedState: false,
-              filterFn: (node:any) => node.name !== "Attachments"&&node.name !== "Inbox"&&node.name !== "Projects"&&node.name !== "Resources"&&node.name !== "Thoughts",
-    }),
-    Component.Explorer({
-              title: "📂 项目区 | Projects", 
-              folderClickBehavior: "link",
-              folderDefaultState: "open",
-              useSavedState: false,
-              filterFn: (node:any) => node.name !== "Attachments"&&node.name !== "Inbox"&&node.name !== "Studying"&&node.name !== "Resources"&&node.name !== "Thoughts",
-    }),
-    Component.Explorer({
-              title: "🤔 一些思考 | Thoughts", 
-              folderClickBehavior: "link",
-              folderDefaultState: "open",
-              useSavedState: false,
-              filterFn: (node:any) => node.name !== "Attachments"&&node.name !== "Inbox"&&node.name !== "Studying"&&node.name !== "Resources"&&node.name !== "Projects",
-    }),
-    Component.Explorer({
-              title: "📦 资源区 | Resources", 
-              folderClickBehavior: "link",
-              folderDefaultState: "open",
-              useSavedState: false,
-              filterFn: (node:any) => node.name !== "Attachments"&&node.name !== "Inbox"&&node.name !== "Studying"&&node.name !== "Projects"&&node.name !== "Thoughts",
-    }),
+              filterFn: (node:any) => node.name !== "Attachments"&&node.name !== "Inbox",
+})
   ],
   right: [
     
