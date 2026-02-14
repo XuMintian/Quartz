@@ -25,17 +25,6 @@ draft: false
 [点击下载我的简历 (PDF)](content/Attachment/PDF/example_PDF.pdf)
 <a href=".content/Attachment/PDF/example_PDF.pdf">点击下载论文</a>
 
-
----
-
-## 🔭 Current Focus | 最近在折腾
-
-1目前的精力主要分配在这些地方：
-
-* **💻 Tech Stack**: 正在死磕 `C++` 和 `LaTeX`，同时也折腾像 **Quartz + Obsidian** 这样的知识管理工具。
-* **🎓 Academic**: 备战 **CET-6** 和未来的语言考试，目标是前往 **🇭🇰 香港 / 🇯🇵 日本 / 🇩🇪 德国** 攻读博士学位。
-* **🏃‍♂️ Lifestyle**: 坚持低钠高钾饮食，研究如何用科学的方式保持精力充沛。
-
 ---
 
 ## 🗺️ Roadmap | 站点导航
