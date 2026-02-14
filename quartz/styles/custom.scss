@@ -274,50 +274,16 @@ a.internal:hover, a.external:hover {
   overflow-y: auto;
 }
 
-/* --- 1. 解决四个边栏按钮重复的问题 --- */
-/* 只保留第一个按钮，隐藏后面三个 */
-.sidebar-buttons-container > .sidebar-btn:not(:first-child) {
-  display: none !important;
+@media (min-width: 800px) {
+  .sidebar.right {
+    /* 原来是 3rem，现在改大。
+       你可以根据需要调整 8rem、10rem 甚至更多，直到它和正文标题对齐或者让你看着舒服 */
+    padding-top: 15rem !important; 
+  }
 }
 
-/* --- 2. 彻底消灭蓝色/粉色小三角 --- */
-/* 针对所有 Explorer 标题旁的折叠箭头 */
-.explorer > button svg, 
-.explorer > button .lucide-chevron-down {
-  display: none !important;
+/* 如果你只想让目录(TOC)往下走，而不影响下面的反向链接，也可以用这个方案：
+.toc {
+  margin-top: 5rem !important;
 }
-
-/* 针对文件夹前面的小箭头 */
-.explorer .folder-icon {
-  display: none !important;
-}
-
-/* --- 3. 解决“只显示一个”和“拥挤”问题 --- */
-.explorer {
-  margin-bottom: 2rem !important; /* 板块间距 */
-}
-
-.explorer > #explorer-content {
-  max-height: none !important; /* 强制撑开，显示所有内容 */
-  height: auto !important;
-}
-
-/* --- 4. 标题美化 --- */
-.explorer > button {
-  pointer-events: none !important; /* 禁用折叠点击 */
-  border-bottom: 2px solid rgba(216, 27, 96, 0.1) !important;
-  margin-bottom: 0.5rem !important;
-}
-
-.explorer > button h2 {
-  font-size: 1.2rem !important;
-  font-weight: 800 !important;
-  color: #d81b60 !important;
-}
-
-/* --- 5. 确保侧边栏整体滚动 --- */
-.sidebar.left {
-  overflow-y: auto !important;
-  padding-bottom: 3rem;
-}
-
+*/
