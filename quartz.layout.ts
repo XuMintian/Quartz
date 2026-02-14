@@ -46,7 +46,9 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Darkmode(),
     Component.MobileOnly(Component.Spacer()),
     Component.Explorer({
-              title: "我的知识库", // 👈 在这里改！想叫什么叫什么，比如 "Knowledge" 或 "Recent Writing"
+              title: "我的知识库", 
+              folderDefaultState: "open",
+              useSavedState: false,
               filterFn: (node:any) => node.name !== "Attachments"&&node.name !== "Inbox",
     }),
     
