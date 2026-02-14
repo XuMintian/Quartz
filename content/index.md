@@ -11,13 +11,13 @@ aliases:
 
 ---
 
-## 🗺️ Roadmap | 站点导航
+## 🗺️ Navigation | 导航
 
 你可以从这些入口开始探索：
 
-* 📝 **[[Studying_index|Studying]]**: 学习笔记，包含 CS 基础、英语词源积累等。
+* **[[Studying_index|📖 Studying | 学习区]]**: 学习笔记，包含 CS 基础、英语词源积累等。
 
-* 🛠️ **[[Projects_index|Projects]]**: 1的个人项目与折腾记录（比如这个网站的搭建过程）。
+* 📂 **[[Projects_index|Projects]]**: 1的个人项目与折腾记录（比如这个网站的搭建过程）。
 
 * 💭 **[[Thoughts_index|Thoughts]]**: 碎片化的想法、灵感闪念或对历史（如唐朝、庄子）的随笔。
 
