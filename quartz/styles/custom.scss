@@ -85,7 +85,7 @@ a.internal:hover, a.external:hover {
   .center {
     /* 不用 margin auto 了，靠父元素 align-items 居中 */
     display: block !important;
-    
+    padding: 2rem 4rem !important;
     /* 宽度控制：占据屏幕的 70% ~ 80%，视觉上最舒服 */
     width: 75% !important; 
     min-width: 800px !important; /* 保证最小不低于这个宽 */
@@ -95,7 +95,8 @@ a.internal:hover, a.external:hover {
     box-sizing: border-box !important;
     
     /* 确保文字不会贴边 */
-    margin: 0 !important; 
+    //margin: 0 !important; 
+    margin: 0 auto !important;
   }
   
   /* 3. 顶部 Flex 栏也要对齐 */
