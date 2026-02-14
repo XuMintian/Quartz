@@ -15,13 +15,13 @@ aliases:
 
 你可以从这些入口开始探索：
 
-* **[[Studying_index|📖 Studying | 学习区]]**: 学习笔记，包含 CS 基础、英语词源积累等。
+* **[📖 Studying | 学习区](Studying_index)**：学习笔记，包含 CS 基础、英语词源积累等。
 
-* 📂 **[[Projects_index|Projects]]**: 1的个人项目与折腾记录（比如这个网站的搭建过程）。
+* **[📂 Projects | 项目区](Projects_index)**：我的个人项目与折腾记录（比如这个网站的搭建过程）。
 
-* 💭 **[[Thoughts_index|Thoughts]]**: 碎片化的想法、灵感闪念或对历史（如唐朝、庄子）的随笔。
+* **[💭 Thoughts | 一些想法](Thoughts_index)**：碎片化的想法、灵感闪念或对历史（如唐朝、庄子）的随笔。
 
-
+- **[📦 Resources | 资源区](Resources_index)**：ke'neng'hui
 
 
 ---
