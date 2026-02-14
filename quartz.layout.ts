@@ -45,42 +45,63 @@ export const defaultContentPageLayout: PageLayout = {
     //}),
     Component.Darkmode(),
     Component.MobileOnly(Component.Spacer()),
+// --- 1. Studying 板块 ---
     Component.Explorer({
-              title: "📖 学习区 | Studying", 
-              folderClickBehavior: "link",
-              folderDefaultState: "open",
-              useSavedState: false,
-              filterFn: (node: any) => {
-        // 1. 如果是文件夹，名字必须叫 Studying
+      title: "📖 学习区 | Studying", 
+      folderClickBehavior: "link",
+      folderDefaultState: "open",
+      useSavedState: false,
+      filterFn: (node: any) => {
+        // 如果是文件夹，只允许名字叫 Studying 的通过
         if (node.children.length > 0) {
           return node.name === "Studying"
         }
-        // 2. 如果是文件，路径必须包含 Studying/
-        // 注意：这里用 path 来锁定它必须属于这个分类
-        const path = node.file?.path ?? ""
-        return path.includes("Studying/")
+        // 如果是文件，只有当它没有父文件夹（即在根目录，虽然你这不太可能）
+        // 或者它的父节点通过了上面的过滤时，它才会被保留
+        return true 
       },
     }),
+
+    // --- 2. Projects 板块 ---
     Component.Explorer({
-              title: "📂 项目区 | Projects", 
-              folderClickBehavior: "link",
-              folderDefaultState: "open",
-              useSavedState: false,
-              filterFn: (node:any) => node.name !== "Attachments"&&node.name !== "Inbox"&&node.name !== "Studying"&&node.name !== "Resources"&&node.name !== "Thoughts",
+      title: "📂 项目区 | Projects", 
+      folderClickBehavior: "link",
+      folderDefaultState: "open",
+      useSavedState: false,
+      filterFn: (node: any) => {
+        if (node.children.length > 0) {
+          return node.name === "Projects"
+        }
+        return true
+      },
     }),
+
+    // --- 3. Thoughts 板块 ---
     Component.Explorer({
-              title: "🤔 一些思考 | Thoughts", 
-              folderClickBehavior: "link",
-              folderDefaultState: "open",
-              useSavedState: false,
-              filterFn: (node:any) => node.name !== "Attachments"&&node.name !== "Inbox"&&node.name !== "Studying"&&node.name !== "Resources"&&node.name !== "Projects",
+      title: "🤔 一些思考 | Thoughts", 
+      folderClickBehavior: "link",
+      folderDefaultState: "open",
+      useSavedState: false,
+      filterFn: (node: any) => {
+        if (node.children.length > 0) {
+          return node.name === "Thoughts"
+        }
+        return true
+      },
     }),
+
+    // --- 4. Resources 板块 ---
     Component.Explorer({
-              title: "📦 资源区 | Resources", 
-              folderClickBehavior: "link",
-              folderDefaultState: "open",
-              useSavedState: false,
-              filterFn: (node:any) => node.name !== "Attachments"&&node.name !== "Inbox"&&node.name !== "Studying"&&node.name !== "Projects"&&node.name !== "Thoughts",
+      title: "📦 资源区 | Resources", 
+      folderClickBehavior: "link",
+      folderDefaultState: "open",
+      useSavedState: false,
+      filterFn: (node: any) => {
+        if (node.children.length > 0) {
+          return node.name === "Resources"
+        }
+        return true
+      },
     }),
   ],
   right: [

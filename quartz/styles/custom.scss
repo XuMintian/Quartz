@@ -274,4 +274,85 @@ a.internal:hover, a.external:hover {
   overflow-y: auto;
 }
 
+/* --- 1. 解决四个边栏按钮重复的问题 --- */
+/* 只保留第一个按钮，隐藏后面三个 */
+.sidebar-buttons-container > .sidebar-btn:not(:first-child) {
+  display: none !important;
+}
 
+/* --- 2. 彻底消灭蓝色/粉色小三角 --- */
+/* 针对所有 Explorer 标题旁的折叠箭头 */
+.explorer > button svg, 
+.explorer > button .lucide-chevron-down {
+  display: none !important;
+}
+
+/* 针对文件夹前面的小箭头 */
+.explorer .folder-icon {
+  display: none !important;
+}
+
+/* --- 3. 解决“只显示一个”和“拥挤”问题 --- */
+.explorer {
+  margin-bottom: 2rem !important; /* 板块间距 */
+}
+
+.explorer > #explorer-content {
+  max-height: none !important; /* 强制撑开，显示所有内容 */
+  height: auto !important;
+}
+
+/* --- 4. 标题美化 --- */
+.explorer > button {
+  pointer-events: none !important; /* 禁用折叠点击 */
+  border-bottom: 2px solid rgba(216, 27, 96, 0.1) !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.explorer > button h2 {
+  font-size: 1.2rem !important;
+  font-weight: 800 !important;
+  color: #d81b60 !important;
+}
+
+/* --- 5. 确保侧边栏整体滚动 --- */
+.sidebar.left {
+  overflow-y: auto !important;
+  padding-bottom: 3rem;
+}
+
+/* 1. 强力抹除所有 Explorer 顶部的折叠三角 */
+.explorer > button svg, 
+.explorer > button .lucide-chevron-down,
+.explorer > button .lucide-chevron-right {
+  display: none !important;
+}
+
+/* 2. 强力抹除文件夹前面的粉色/蓝色三角 */
+.explorer .folder-icon {
+  display: none !important;
+}
+
+/* 3. 解决左上角出现 4 个“三道杠”菜单按钮的问题 */
+/* 我们只保留第一个，隐藏后面三个 */
+.sidebar-buttons-container > .sidebar-btn:not(:first-child) {
+  display: none !important;
+}
+
+/* 4. 解决拥挤，让内容彻底展开 */
+.explorer > #explorer-content {
+  max-height: none !important;
+  height: auto !important;
+}
+
+/* 5. 样式微调：让标题和下方的 _index 更有层次感 */
+.explorer > button {
+  pointer-events: none !important; /* 标题不可点击缩起 */
+  border-bottom: 2px solid rgba(216, 27, 96, 0.1) !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* 移除文件夹本身的缩进，因为现在每个组件只有一个文件夹 */
+.explorer > #explorer-content > ul > li {
+  padding-left: 0 !important;
+}
