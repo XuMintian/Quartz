@@ -50,9 +50,15 @@ export const defaultContentPageLayout: PageLayout = {
               folderClickBehavior: "link",
               folderDefaultState: "open",
               useSavedState: false,
-              filterFn: (node:any) => node.name !== "Attachments"&&node.name !== "Inbox",
+              filterFn: (node:any) => node.name !== "Attachments"&&node.name !== "Inbox"&&node.name !== "Projects"&&node.name !== "Resources"&&node.name !== "Thoughts",
     }),
-    
+    Component.Explorer({
+              title: "📂 项目区 | Studying", 
+              folderClickBehavior: "link",
+              folderDefaultState: "open",
+              useSavedState: false,
+              filterFn: (node:any) => node.name !== "Attachments"&&node.name !== "Inbox"&&node.name !== ""&&node.name !== "Resources"&&node.name !== "Thoughts",
+    }),
   ],
   right: [
     
