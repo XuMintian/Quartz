@@ -19,6 +19,7 @@ const config: QuartzConfig = {
     baseUrl: "quartz.jzhao.xyz",
     ignorePatterns: ["private", "templates", ".obsidian","Inbox"],
     defaultDateType: "modified",
+    
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
