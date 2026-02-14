@@ -16,15 +16,15 @@ aliases:
 
 你可以从这些入口开始探索：
 
-* 📝 **[[]]**: 学习笔记，包含 CS 基础、英语词源积累等。
-* 🛠️ **[[9|Projects]]**: 1的个人项目与折腾记录（比如这个网站的搭建过程）。
-* 💭 **[[7|Thoughts]]**: 碎片化的想法、灵感闪念或对历史（如唐朝、庄子）的随笔。
+* 📝 **[[Studying_index|Studying]]**: 学习笔记，包含 CS 基础、英语词源积累等。
+* 🛠️ **[[Projects_index|Projects]]**: 1的个人项目与折腾记录（比如这个网站的搭建过程）。
+* 💭 **[[Thoughts_index|Thoughts]]**: 碎片化的想法、灵感闪念或对历史（如唐朝、庄子）的随笔。
 
 ---
 
 ## 📮 Connect | 保持联系
 
-1在这个互联网角落独自耕耘，但也期待思想的碰撞。
+在这个互联网角落独自耕耘，但也期待思想的碰撞。
 
 * **GitHub**: [XuMintian](https://github.com/XuMintian)
 * **Email**: [byl2746962022@gmail.com](mailto:byl2746962022@gmail.com)
