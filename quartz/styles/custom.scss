@@ -327,21 +327,3 @@ a.internal:hover, a.external:hover {
   opacity: 0.6;
 }
 
-/* --- 阅读进度条 --- */
-#progress-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 3px; /* 进度条高度，建议 2px-4px */
-  background: transparent;
-  z-index: 10010; /* 确保在最最顶层 */
-}
-
-#progress-bar {
-  height: 100%;
-  width: 0%; /* 初始宽度为0 */
-  background: #d81b60; /* 使用你的主题粉色 */
-  transition: width 0.1s ease-out;
-  box-shadow: 0 0 10px rgba(216, 27, 96, 0.5); /* 增加一点发光感 */
-}

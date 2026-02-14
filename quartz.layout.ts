@@ -1,5 +1,15 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
+// 在 import 之后添加这一段
+import { QuartzComponent, QuartzComponentProps } from "./quartz/components/types"
+
+const CustomHtml = (html: string): QuartzComponent => {
+  const component = ({ displayClass }: QuartzComponentProps) => (
+    <div class={displayClass} dangerouslySetInnerHTML={{ __html: html }} />
+  )
+  return component
+}
+
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
@@ -9,7 +19,24 @@ export const sharedPageComponents: SharedLayout = {
     Component.PageTitle(),
   ],
   head: Component.Head(),
-  afterBody: [Component.Graph()],
+  afterBody: [
+              Component.Graph(),
+              Component.Html({
+      html: `
+        <div id="progress-container"><div id="progress-bar"></div></div>
+        <script>
+          window.onscroll = function() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progress-bar").style.width = scrolled + "%";
+          };
+        </script>
+      `
+    }),
+            
+            
+            ],
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/XuMintian",
