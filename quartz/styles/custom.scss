@@ -349,45 +349,58 @@ a.internal:hover, a.external:hover {
   border-bottom-right-radius: 2px;
 }
 
-/* 回到顶部按钮 */
+/* 回到顶部按钮 - 亚克力霓虹版 */
 .back-to-top {
   position: fixed;
-  bottom: 50px;
-  right: 50px;
+  /* 建议位置稍微往右靠一点，通常 2rem 到 3rem 视觉最平衡 */
+  bottom: 90px; 
+  right: 180px; 
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* 渐变背景 */
-  color: white;
-  border: none;
-  border-radius: 50%; /* 圆形按钮 */
+  
+  /* 1. 亚克力质感：使用半透明白色 + 模糊效果 */
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  
+  /* 2. 主题色文字/图标 */
+  color: #d81b60 !important; 
+  
+  /* 3. 边框：极细的淡粉色边框，增加精致感 */
+  border: 1px solid rgba(216, 27, 96, 0.2) !important;
+  border-radius: 50%; 
+  
   font-size: 24px;
   cursor: pointer;
-  z-index: 9998;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 10009; /* 确保在侧边栏之下，但在正文之上 */
   
-  /* 默认隐藏 */
+  /* 4. 阴影：改用淡淡的粉色投影，呼应主题 */
+  box-shadow: 0 8px 24px rgba(216, 27, 96, 0.15);
+  
+  /* 默认隐藏状态 */
   opacity: 0;
   visibility: hidden;
-  transform: translateY(20px);
-  transition: all 0.3s ease;
+  transform: translateY(20px) scale(0.8); /* 增加缩放动画，弹出感更强 */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* 加入弹性动画 */
 }
 
 /* 显示状态 */
 .back-to-top.show {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
 /* 悬停效果 */
 .back-to-top:hover {
-  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  /* 悬停时背景变粉，文字变白 */
+  background: #d81b60 !important;
+  color: white !important;
+  transform: translateY(-5px) scale(1.1); /* 向上跳动并轻微放大 */
+  box-shadow: 0 12px 28px rgba(216, 27, 96, 0.3);
 }
 
-/* 点击效果 */
+/* 点击反馈 */
 .back-to-top:active {
-  transform: translateY(-1px);
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px) scale(0.7);
 }
