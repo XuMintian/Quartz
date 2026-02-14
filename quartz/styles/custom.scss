@@ -327,3 +327,14 @@ a.internal:hover, a.external:hover {
   opacity: 0.6;
 }
 
+/* 阅读进度条 */
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px; /* 极细，可以改成 2px 或 1px */
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6); /* 渐变色，可自定义 */
+  z-index: 9999;
+  transition: width 0.1s ease-out;
+}
