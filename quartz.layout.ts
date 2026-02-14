@@ -52,18 +52,19 @@ export const defaultContentPageLayout: PageLayout = {
               useSavedState: false,
               filterFn: (node:any) => node.name !== "Attachments"&&node.name !== "Inbox",   
             }),
-    Component.TagList(),
+    Component.RecentNotes({
+      title: "✨ 最近更新 | Recently",
+      limit: 3,
+      filter: (f) => !f.slug?.startsWith("templates/"), // 过滤掉模板文件夹
+    }),
+  
   ],
   right: [
     
     //Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
-    Component.RecentNotes({
-      title: "✨ 最近更新 | Recently",
-      limit: 3,
-      filter: (f) => !f.slug?.startsWith("templates/"), // 过滤掉模板文件夹
-    }),
+    
   ],
 }
 
