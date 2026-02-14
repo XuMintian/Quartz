@@ -23,7 +23,7 @@ draft: false
 * 🌸 **设计爱好者**：喜欢极简主义，也就是你现在看到的这个[粉色数字花园](meta.md)。
 * ♟️ **黑白棋手**：试图在[[奥赛罗 (Othello)]] 的黑白翻转中寻找最优解。
 * [[test]]
-* [[example_PDF.pdf]]
+*<a href="./content/Attachment/PDF" download="文件名.pdf">点击下载 PDF 指南</a>
 
 
 ---
