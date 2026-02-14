@@ -18,9 +18,9 @@ draft: false
 一名 19 岁的**电子信息工程**在读学生（ZZU & UOW Joint Program）。
 
 1不只是一个写代码的工科生，1还是：
-* 🌏 **世界观察者**：关注[全球生活成本](tags/economics)、汇率走势与个人财务独立 (FIRE)。
-* 🔠 **词源考据党**：沉迷于用[词根词缀](tags/linguistics)解构英语单词的底层逻辑。
-* 🌸 **设计爱好者**：喜欢极简主义，也就是你现在看到的这个[粉色数字花园](tags/meta)。
+* 🌏 **世界观察者**：关注[全球生活成本](economics.md)、汇率走势与个人财务独立 (FIRE)。
+* 🔠 **词源考据党**：沉迷于用[词根词缀](linguistics.md)解构英语单词的底层逻辑。
+* 🌸 **设计爱好者**：喜欢极简主义，也就是你现在看到的这个[粉色数字花园](meta.md)。
 * ♟️ **黑白棋手**：试图在[[奥赛罗 (Othello)]] 的黑白翻转中寻找最优解。
 * [[test]]
 * [[example_PDF.pdf]]
@@ -44,10 +44,10 @@ draft: false
 
 你可以从这些入口开始探索：
 
-* 📂 **[[posts/index|Blog Posts]]**: 完整的文章，通常是深思熟虑后的输出。
+* 📂 **[[content/posts/index|Blog Posts]]**: 完整的文章，通常是深思熟虑后的输出。
 * 📝 **[[notes/index|Study Notes]]**: 学习笔记，包含 CS 基础、英语词源积累等。
-* 💭 **[[thoughts/index|Thoughts]]**: 碎片化的想法、灵感闪念或对历史（如唐朝、庄子）的随笔。
-* 🛠️ **[[projects/index|Projects]]**: 1的个人项目与折腾记录（比如这个网站的搭建过程）。
+* 💭 **[[content/thoughts/index|Thoughts]]**: 碎片化的想法、灵感闪念或对历史（如唐朝、庄子）的随笔。
+* 🛠️ **[[content/projects/index|Projects]]**: 1的个人项目与折腾记录（比如这个网站的搭建过程）。
 
 ---
 
