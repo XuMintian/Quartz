@@ -45,49 +45,12 @@ export const defaultContentPageLayout: PageLayout = {
     //}),
     Component.Darkmode(),
     Component.MobileOnly(Component.Spacer()),
-    // --- 1. Studying 板块 ---
     Component.Explorer({
-      title: "Studying", 
-      folderDefaultState: "open",
-      useSavedState: false,
-      filterFn: (node: any) => {
-        // 核心逻辑：只排除其他三个大板块和系统文件夹，保留 Studying 及其下所有内容（含 _index）
-        const omit = new Set(["Projects", "Resources", "Thoughts", "Attachments", "tags", "Inbox", "templates", "hosting"]);
-        return node.name === "Studying" || !omit.has(node.name);
-      },
-    }),
-
-    // --- 2. Projects 板块 ---
-    Component.Explorer({
-      title: "Projects",
-      folderDefaultState: "open",
-      useSavedState: false,
-      filterFn: (node: any) => {
-        const omit = new Set(["Studying", "Resources", "Thoughts", "Attachments", "tags", "Inbox", "templates", "hosting"]);
-        return node.name === "Projects" || !omit.has(node.name);
-      },
-    }),
-
-    // --- 3. Thoughts 板块 ---
-    Component.Explorer({
-      title: "Thoughts",
-      folderDefaultState: "open",
-      useSavedState: false,
-      filterFn: (node: any) => {
-        const omit = new Set(["Studying", "Projects", "Resources", "Attachments", "tags", "Inbox", "templates", "hosting"]);
-        return node.name === "Thoughts" || !omit.has(node.name);
-      },
-    }),
-
-    // --- 4. Resources 板块 ---
-    Component.Explorer({
-      title: "Resources",
-      folderDefaultState: "open",
-      useSavedState: false,
-      filterFn: (node: any) => {
-        const omit = new Set(["Studying", "Projects", "Thoughts", "Attachments", "tags", "Inbox", "templates", "hosting"]);
-        return node.name === "Resources" || !omit.has(node.name);
-      },
+              title: "📖 学习区 | Studying", 
+              folderClickBehavior: "link",
+              folderDefaultState: "open",
+              useSavedState: false,
+              filterFn: (node:any) => node.name !== "Attachments"&&node.name !== "Inbox",
     }),
     
   ],
