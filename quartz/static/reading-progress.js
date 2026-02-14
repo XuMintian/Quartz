@@ -1,6 +1,5 @@
-// quartz/components/scripts/readingProgress.inline.ts
-export default `
-document.addEventListener("nav", () => {
+// quartz/static/reading-progress.js
+document.addEventListener("DOMContentLoaded", () => {
   const progressBar = document.createElement("div");
   progressBar.className = "reading-progress";
   document.body.appendChild(progressBar);
@@ -14,6 +13,6 @@ document.addEventListener("nav", () => {
   }
 
   window.addEventListener("scroll", updateProgress);
+  window.addEventListener("resize", updateProgress);
   updateProgress();
 });
-` as const
