@@ -50,14 +50,20 @@ export const defaultContentPageLayout: PageLayout = {
               folderClickBehavior: "link",
               folderDefaultState: "open",
               useSavedState: false,
-              filterFn: (node:any) => node.name !== "Attachments"&&node.name !== "Inbox",
-})
+              filterFn: (node:any) => node.name !== "Attachments"&&node.name !== "Inbox",   
+            }),
+    Component.TagList(),
   ],
   right: [
     
     //Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
+    Component.RecentNotes({
+      title: "✨ 最近更新 | Recently",
+      limit: 3,
+      filter: (f) => !f.slug?.startsWith("templates/"), // 过滤掉模板文件夹
+    }),
   ],
 }
 
