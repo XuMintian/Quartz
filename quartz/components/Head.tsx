@@ -62,6 +62,7 @@ export default (() => {
         <meta property="og:description" content={description} />
         <meta property="og:image:alt" content={description} />
         <script src="/static/reading-progress.js"></script>
+        <script src="/static/back-to-top.js"></script>
         {!usesCustomOgImage && (
           <>
             <meta property="og:image" content={ogImageDefaultPath} />
