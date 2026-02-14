@@ -1,0 +1,1 @@
+[复变函数教材](https://github.com/XuMintian/Quartz/releases/download/Resources/Complex.Variables.and.Applications.8th.Edition.James.Brown.Ruel.Churchill.Z-Library.pdf)
