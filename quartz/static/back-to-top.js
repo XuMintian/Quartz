@@ -14,7 +14,7 @@
 
     backToTopButton = document.createElement("button");
     backToTopButton.className = "back-to-top";
-    backToTopButton.innerHTML = "🚀";
+    backToTopButton.innerHTML = "☝";
     backToTopButton.setAttribute("aria-label", "回到顶部");
     document.body.appendChild(backToTopButton);
 

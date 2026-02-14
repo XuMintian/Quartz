@@ -58,7 +58,10 @@ export const defaultContentPageLayout: PageLayout = {
               useSavedState: false,
               filterFn: (node:any) => node.name !== "Attachments"&&node.name !== "Inbox",   
             }),
-    Component.RecentNotes({
+           
+    Component.RecentNotes(
+      {
+      
       title: "✨ 最近更新 | Recently",
       limit: 3,
       filter: (f) => !f.slug?.startsWith("templates/"), // 过滤掉模板文件夹
