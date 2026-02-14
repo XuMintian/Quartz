@@ -1,6 +1,6 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
-import readingProgress from "./quartz/components/scripts/readingProgress.inline"
+
 
 
 // components shared across all pages
@@ -13,8 +13,7 @@ export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   afterBody: [
               Component.Graph(),
-              Component.Script({ src: readingProgress })
-            
+              
             
             ],
   footer: Component.Footer({

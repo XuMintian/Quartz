@@ -333,8 +333,18 @@ a.internal:hover, a.external:hover {
   top: 0;
   left: 0;
   width: 0%;
-  height: 3px; /* 极细，可以改成 2px 或 1px */
-  background: linear-gradient(90deg, #3b82f6, #8b5cf6); /* 渐变色，可自定义 */
-  z-index: 9999;
+  height: 3px; 
+  
+  /* 1. 颜色：从浅粉色过渡到你的主色调深粉色 */
+  background: linear-gradient(90deg, #ffc9db 0%, #d81b60 100%); 
+  
+  /* 2. 增加一点点光晕效果，呼应你的亚克力侧边栏 */
+  box-shadow: 0 0 10px rgba(216, 27, 96, 0.4); 
+  
+  z-index: 10011; /* 确保在所有元素的最顶层 */
   transition: width 0.1s ease-out;
+  
+  /* 3. 让进度条末端圆润一点，更有精致感 */
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
