@@ -21,7 +21,7 @@ aliases:
 
 * **[💭 Thoughts | 一些想法](Thoughts_index)**：碎片化的想法、灵感闪念或对历史（如唐朝、庄子）的随笔。
 
-- **[📦 Resources | 资源区](Resources_index)**：ke'neng'hui
+- **[📦 Resources | 资源区](Resources_index)**：可能会引用到的资料，整理在这里。
 
 
 ---
