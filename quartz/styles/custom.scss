@@ -321,38 +321,3 @@ a.internal:hover, a.external:hover {
   padding-bottom: 3rem;
 }
 
-/* 1. 强力抹除所有 Explorer 顶部的折叠三角 */
-.explorer > button svg, 
-.explorer > button .lucide-chevron-down,
-.explorer > button .lucide-chevron-right {
-  display: none !important;
-}
-
-/* 2. 强力抹除文件夹前面的粉色/蓝色三角 */
-.explorer .folder-icon {
-  display: none !important;
-}
-
-/* 3. 解决左上角出现 4 个“三道杠”菜单按钮的问题 */
-/* 我们只保留第一个，隐藏后面三个 */
-.sidebar-buttons-container > .sidebar-btn:not(:first-child) {
-  display: none !important;
-}
-
-/* 4. 解决拥挤，让内容彻底展开 */
-.explorer > #explorer-content {
-  max-height: none !important;
-  height: auto !important;
-}
-
-/* 5. 样式微调：让标题和下方的 _index 更有层次感 */
-.explorer > button {
-  pointer-events: none !important; /* 标题不可点击缩起 */
-  border-bottom: 2px solid rgba(216, 27, 96, 0.1) !important;
-  margin-bottom: 0.5rem !important;
-}
-
-/* 移除文件夹本身的缩进，因为现在每个组件只有一个文件夹 */
-.explorer > #explorer-content > ul > li {
-  padding-left: 0 !important;
-}
