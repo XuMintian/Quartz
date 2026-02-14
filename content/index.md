@@ -20,6 +20,10 @@ aliases:
 > Contents
 
 
+>[!quote]
+>text
+
+
 
 ---
 
