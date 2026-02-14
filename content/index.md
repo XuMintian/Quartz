@@ -45,7 +45,7 @@ draft: false
 你可以从这些入口开始探索：
 
 * 📂 **[[content/posts/index|Blog Posts]]**: 完整的文章，通常是深思熟虑后的输出。
-* 📝 **[[notes/index|Study Notes]]**: 学习笔记，包含 CS 基础、英语词源积累等。
+* 📝 **[[content/notes/index|Study Notes]]**: 学习笔记，包含 CS 基础、英语词源积累等。
 * 💭 **[[content/thoughts/index|Thoughts]]**: 碎片化的想法、灵感闪念或对历史（如唐朝、庄子）的随笔。
 * 🛠️ **[[content/projects/index|Projects]]**: 1的个人项目与折腾记录（比如这个网站的搭建过程）。
 
