@@ -50,7 +50,16 @@ export const defaultContentPageLayout: PageLayout = {
               folderClickBehavior: "link",
               folderDefaultState: "open",
               useSavedState: false,
-              filterFn: (node:any) => node.name !== "Attachments"&&node.name !== "Inbox"&&node.name !== "Projects"&&node.name !== "Resources"&&node.name !== "Thoughts",
+              filterFn: (node: any) => {
+        // 1. 如果是文件夹，名字必须叫 Studying
+        if (node.children.length > 0) {
+          return node.name === "Studying"
+        }
+        // 2. 如果是文件，路径必须包含 Studying/
+        // 注意：这里用 path 来锁定它必须属于这个分类
+        const path = node.file?.path ?? ""
+        return path.includes("Studying/")
+      },
     }),
     Component.Explorer({
               title: "📂 项目区 | Projects", 
