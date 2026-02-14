@@ -274,4 +274,83 @@ a.internal:hover, a.external:hover {
   overflow-y: auto;
 }
 
+/* =========================================================
+   方案：4个独立 Explorer 的专属样式
+   ========================================================= */
 
+/* 1. 每一个 Explorer 组件之间的间距 */
+.explorer {
+  margin-top: 0 !important;
+  margin-bottom: 3rem !important; /* 👈 这里控制四个大板块之间的距离 */
+  padding-bottom: 0 !important;
+}
+
+/* 最后一个不用留底边距 */
+.explorer:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* 2. 隐藏组件可能自带的 H2 空标题（防止占位） */
+.explorer h2 {
+  display: none !important;
+}
+
+/* 3. 核心：隐藏所有文件夹左侧的“三角箭头” */
+/* 这样看起来就不像能折叠的样子，纯粹像个列表 */
+.explorer .folder-icon {
+  display: none !important;
+}
+
+/* =========================================================
+   把根目录文件夹 (Studying, Projects...) 伪装成标题
+   ========================================================= */
+
+/* 选中每个 Explorer 里的第一个 li (也就是那个根文件夹) */
+.explorer > #explorer-content > ul > li > .folder-outer {
+  
+  /* A. 字体样式升级 */
+  font-size: 1.3rem !important;
+  font-weight: 800 !important;
+  color: #d81b60 !important; /* 粉色大标题 */
+  text-transform: uppercase; /* 变成大写，更有气势 */
+  letter-spacing: 0.05em;
+  
+  /* B. 增加底部下划线 */
+  border-bottom: 2px solid rgba(216, 27, 96, 0.15);
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.4rem;
+  
+  /* C. 鼠标样式：改成默认指针，暗示“这是标题，别点我” */
+  cursor: default !important;
+}
+
+/* 防止点击标题触发背景色变化 */
+.explorer > #explorer-content > ul > li > .folder-outer:hover {
+  background-color: transparent !important;
+}
+
+/* 如果你还想保留点击跳转功能，但不想让他看起来像按钮 */
+.explorer > #explorer-content > ul > li > .folder-outer button {
+  pointer-events: auto !important;
+  text-align: left;
+}
+
+/* =========================================================
+   内容列表微调
+   ========================================================= */
+
+/* 修正因为去掉了箭头导致的左边距不对齐 */
+.explorer ul {
+  padding-left: 0.5rem !important;
+}
+
+/* 根文件夹下面的内容列表 (子文件) */
+.explorer > #explorer-content > ul > li > ul {
+  /* 强制显示，防止手贱折叠 */
+  display: block !important; 
+  
+  /* 左侧加一条细线，增加层次感 */
+  border-left: 2px solid rgba(0,0,0,0.05);
+  padding-left: 1rem !important;
+  margin-left: 0.2rem !important;
+}
