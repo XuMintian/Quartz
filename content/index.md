@@ -12,6 +12,14 @@ aliases:
 
 
 
+> [!NOTE] Title
+> Contents
+
+
+> [!bug] Title
+> Contents
+
+
 
 ---
 
