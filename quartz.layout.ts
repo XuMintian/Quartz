@@ -9,7 +9,7 @@ export const sharedPageComponents: SharedLayout = {
     Component.PageTitle(),
   ],
   head: Component.Head(),
-  afterBody: [],
+  afterBody: [Component.Graph()],
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/XuMintian",
@@ -53,7 +53,7 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   right: [
     
-    Component.Graph(),
+    //Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],

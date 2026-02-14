@@ -78,7 +78,7 @@ a.internal:hover, a.external:hover {
     align-items: center !important; /* 👈 这是关键：让子元素强制水平居中 */
     margin: 0 !important;
     padding: 0 !important;
-    //overflow-x: hidden !important; /* 防止横向滚动条 */
+    overflow-x: hidden !important; /* 防止横向滚动条 */
   }
 
   /* 2. 重建正文：宽屏且居中 */
