@@ -1,42 +1,24 @@
 ---
 title: Welcome to XuMintian's Garden 🌸
-layout: folder
 aliases:
-cssclasses:
-tags:
-draft: false
+  - index
+  - About Me
 ---
-
-
-> [!quote] 这里的每一篇笔记都是一颗种子，正在慢慢生长。
-> Welcome to my Digital Garden. 这里没有杂乱的算法推荐，只有1真实的思考轨迹。
-
 ## 👋 About Me | 关于我
 
-你好！1是 **XuMintian**。
-一名 19 岁的**电子信息工程**在读学生（ZZU & UOW Joint Program）。
+你好！我是 **XuMintian**。
+一名 19 岁的**电子信息工程**在读大二学生（ZZU & UOW ）。
 
-1不只是一个写代码的工科生，1还是：
-* 🌏 **世界观察者**：关注[全球生活成本](economics.md)、汇率走势与个人财务独立 (FIRE)。
-* 🔠 **词源考据党**：沉迷于用[词根词缀](linguistics.md)解构英语单词的底层逻辑。
-* 🌸 **设计爱好者**：喜欢极简主义，也就是你现在看到的这个[粉色数字花园](meta.md)。
-* ♟️ **黑白棋手**：试图在[[奥赛罗 (Othello)]] 的黑白翻转中寻找最优解。
-* [[test]]
-[点击下载我的简历 (PDF)](content/Attachment/PDF/example_PDF.pdf)
-<a href=".content/Attachment/PDF/example_PDF.pdf">点击下载论文</a>
 
 ---
 
 ## 🗺️ Roadmap | 站点导航
 
-这个博客采用 **[Digital Garden](https://maggieappleton.com/garden-history)** (数字花园) 的理念。笔记之间通过链接相互缠绕，而不是单纯的时间线。
-
 你可以从这些入口开始探索：
 
-* 📂 **[[5|Blog Posts]]**: 完整的文章，通常是深思熟虑后的输出。
-* 📝 **[[6|Study Notes]]**: 学习笔记，包含 CS 基础、英语词源积累等。
-* 💭 **[[7|Thoughts]]**: 碎片化的想法、灵感闪念或对历史（如唐朝、庄子）的随笔。
+* 📝 **[[]]**: 学习笔记，包含 CS 基础、英语词源积累等。
 * 🛠️ **[[9|Projects]]**: 1的个人项目与折腾记录（比如这个网站的搭建过程）。
+* 💭 **[[7|Thoughts]]**: 碎片化的想法、灵感闪念或对历史（如唐朝、庄子）的随笔。
 
 ---
 
