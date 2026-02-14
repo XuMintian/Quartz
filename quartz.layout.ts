@@ -54,9 +54,7 @@ export const defaultContentPageLayout: PageLayout = {
               // 排除掉不需要的 tags, endpoints 等
               const omit = new Set(["tags", "Attachments", "Inbox", "hosting", "templates"])
               return !omit.has(node.name)
-               },
-               
-    }),
+              },
     
   ],
   right: [
