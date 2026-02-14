@@ -24,6 +24,7 @@ draft: false
 * ♟️ **黑白棋手**：试图在[[奥赛罗 (Othello)]] 的黑白翻转中寻找最优解。
 * [[test]]
 [点击下载我的简历 (PDF)](content/Attachment/PDF/example_PDF.pdf)
+<a href=".content/Attachment/PDF/example_PDF.pdf">点击下载论文</a>
 
 
 ---
