@@ -58,7 +58,7 @@ export const defaultContentPageLayout: PageLayout = {
               folderClickBehavior: "link",
               folderDefaultState: "open",
               useSavedState: false,
-              filterFn: (node:any) => node.name !== "Attachments"&&node.name !== "Inbox",   
+              filterFn: (node:any) => node.name !== "Attachments"&&node.name !== "Inbox"&&node.name !== "Template",   
             }),
     Component.DesktopOnly(       
     Component.RecentNotes(

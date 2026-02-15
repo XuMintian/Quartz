@@ -15,7 +15,7 @@ aliases:
 
 你可以从这些入口开始探索：
 
-* **[📖 Studying | 学习区](Studying_index)**：学习笔记，包含 CS 基础、英语词源积累等。
+* **[📖 Studying | 学习区](Studying_index.md)**：学习笔记，包含 CS 基础、英语词源积累等。
 
 * **[📂 Projects | 项目区](Projects_index)**：我的个人项目与折腾记录（比如这个网站的搭建过程）。
 
