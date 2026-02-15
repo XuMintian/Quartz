@@ -33,12 +33,6 @@
 >尖括号
 >>是引用块（可以嵌套）
 
-
-> [!info] Title
-> Contents
-
-
-
 > [! Callout] 
 > 这是标注，用于醒目地强调
 > 
@@ -51,9 +45,19 @@
 > 1. note, 自命名（如这个Callout）
 > 2. abstract, summary, tldr
 > 3. info, todo
-> 4. 
+> 4. tip, hint, important
+> 5. success, check, done
+> 6. question, help, faq
+> 7. warning, caution, attention
+> 8. failure, fail, missing
+> 9. danger, error
+> 10. bug
+> 11. example
+> 12. quote, cite 
 
 
+> [!] Title
+> Contents
 
 
 
