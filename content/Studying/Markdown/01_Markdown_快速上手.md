@@ -97,6 +97,8 @@ printf("三个反引号框住代码块");
 
 # 链接
 
+## 内部链接
+
 [[01_Markdown_快速上手#^175730 | 高亮]]
  
 [[00_Markdown_index]]
@@ -108,8 +110,12 @@ printf("三个反引号框住代码块");
 ![[00_Markdown_index#^9fbc17]]
 
 
-## wa
+## 外部链接
+ [个人博客](https://xumintian.cn/)
 
+## 脚注
+
+ 
 
 
 
