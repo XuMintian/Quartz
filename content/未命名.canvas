@@ -1,0 +1,9 @@
+{
+	"nodes":[
+		{"id":"ec56ef1ebf78d69d","type":"text","text":"[[01_Markdown_快速上手#文本样式 | 文本样式]]","x":340,"y":20,"width":114,"height":50},
+		{"id":"083ab6c048cf675d","type":"file","file":"Studying/Markdown/01_Markdown_快速上手.md","x":-180,"y":100,"width":340,"height":260}
+	],
+	"edges":[
+		{"id":"4d071a17eb8c8cc1","fromNode":"083ab6c048cf675d","fromSide":"right","toNode":"ec56ef1ebf78d69d","toSide":"left"}
+	]
+}
