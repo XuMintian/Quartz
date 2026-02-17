@@ -194,7 +194,8 @@ height="450px"
 scrolling="no" 
 border="0" 
 frameborder="no" 
-framespacing="0" allowfullscreen="true">
+framespacing="0" 
+allowfullscreen="true">
 </iframe>
 
 > [!quote] ⚖️ 版权与免责声明
@@ -203,6 +204,22 @@ framespacing="0" allowfullscreen="true">
 > **侵权处理**：如果本内容无意中侵犯了您的权益，请联系我（byl2746962022@gmail.com），我将在确认后第一时间删除。
 > *"Respect the art, honor the artist."*
 
+<iframe 
+width="100%" 
+height="450px" 
+src="https://www.youtube.com/embed/Q4ENRFgPQeM?si=SNdzYBfQmepBFdKe" 
+title="YouTube video player" 
+frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+referrerpolicy="strict-origin-when-cross-origin" 
+allowfullscreen>
+</iframe>
+
+> [!quote] ⚖️ 版权与免责声明
+> **内容来源**：本页引用的音频/视频均来自互联网，版权归原作者所有。
+> **使用目的**：仅作为个人学习笔记、学术研究、传播知识或欣赏使用，无任何商业盈利目的。
+> **侵权处理**：如果本内容无意中侵犯了您的权益，请联系我（byl2746962022@gmail.com），我将在确认后第一时间删除。
+> *"Respect the art, honor the artist."*
 
 
 
