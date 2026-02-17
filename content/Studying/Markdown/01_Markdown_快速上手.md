@@ -179,22 +179,17 @@ printf("三个反引号框住代码块");
 这里只是举一个例子，但是一般我不选择直接嵌入PDF，因为这需要占用 Github 仓库有限的空间，而是给出PDF下载链接供读者自行下载。
 
 更详细的说明，请参考[[02_关于处理PDF的问题| 这里]]
-
-<iframe src=
-"https://player.bilibili.com/player.html?isOutside=true&aid=450941224&bvid=BV1Hj411E7ra&cid=1333975766
-&t=221
-&p=1
-&autoplay=0" 
-
+<div style="position: relative; padding: 30% 45%;">
+<iframe
+src="https://player.bilibili.com/player.html?isOutside=true&aid=450941224&bvid=BV1Hj411E7ra&cid=1333975766&t=221&p=1&autoplay=0&high_quality=1&danmaku=0" 
 width="100%"
 height="450px"
 scrolling="no" 
 border="0" 
 frameborder="no" 
-framespacing="0" 
-allowfullscreen="true">
-
+framespacing="0" allowfullscreen="true">
 </iframe>
+</div>
 
 
 ## 外部链接
