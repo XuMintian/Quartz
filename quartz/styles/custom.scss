@@ -1,5 +1,22 @@
 @use "./base.scss";
 
+/* ============================================================
+   Purple Soul Theme Override for Quartz
+   复刻 Obsidian 的加粗、斜体和高亮文本颜色
+   ============================================================ */
+
+/* 1. 加粗 (Bold) -> 偏粉的酒红色 */
+strong {
+  color: #c2185b;
+  font-weight: 700;
+}
+
+/* 2. 斜体 (Italic) -> 粉色 */
+em {
+  color: #0056d6;
+  font-style: italic;
+}
+
 // put your custom CSS here!
 /* 酷炫的链接下划线动画 */
 a.internal, a.external {
