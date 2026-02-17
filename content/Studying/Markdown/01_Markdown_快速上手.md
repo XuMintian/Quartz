@@ -179,9 +179,16 @@ printf("三个反引号框住代码块");
 这里只是举一个例子，但是一般我不选择直接嵌入PDF，因为这需要占用 Github 仓库有限的空间，而是给出PDF下载链接供读者自行下载。
 
 更详细的说明，请参考[[02_关于处理PDF的问题| 这里]]
-<div style="position: relative; padding: 30% 45%;">
+
+
+
+
+
+
+**嵌入视频**
+
 <iframe
-src="https://player.bilibili.com/player.html?isOutside=true&aid=450941224&bvid=BV1Hj411E7ra&cid=1333975766&t=221&p=1&autoplay=0&high_quality=1&danmaku=0" 
+src="https://player.bilibili.com/player.html?isOutside=true&aid=450941224&bvid=BV1Hj411E7ra&cid=1333975766&t=221&p=1&autoplay=0&high_quality=1" 
 width="100%"
 height="450px"
 scrolling="no" 
@@ -189,7 +196,14 @@ border="0"
 frameborder="no" 
 framespacing="0" allowfullscreen="true">
 </iframe>
-</div>
+
+> [!quote] ⚖️ 版权与免责声明
+> **内容来源**：本页引用的音频/视频均来自互联网，版权归原作者所有。
+> **使用目的**：仅作为个人学习笔记、学术研究、传播知识或欣赏使用，无任何商业盈利目的。
+> **侵权处理**：如果本内容无意中侵犯了您的权益，请联系我（byl2746962022@gmail.com），我将在确认后第一时间删除。
+> *"Respect the art, honor the artist."*
+
+
 
 
 ## 外部链接
