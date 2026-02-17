@@ -17,11 +17,15 @@ aliases:
 
 * **[📖 Studying | 学习区](Studying_index.md)**：学习笔记，包含 CS 基础、英语词源积累等。
 
+
 * **[📂 Projects | 项目区](Projects_index)**：我的个人项目与折腾记录（比如这个网站的搭建过程）。
+
 
 * **[💭 Thoughts | 一些想法](Thoughts_index)**：碎片化的想法、灵感闪念或对历史（如唐朝、庄子）的随笔。
 
+
 - **[📦 Resources | 资源区](Resources_index)**：可能会引用到的资料，整理在这里。
+
 
 ---
 
