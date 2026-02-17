@@ -139,13 +139,14 @@ printf("三个反引号框住代码块");
 		只需笔记名后加#即可
 		
 		| 后可自定义名字
-		[[00_Markdown_index# 
+		[[00_Markdown_index#导言 | 这是Markdown索引的导言标题]]
 	
 	2. 跳转到段落
 		
 		只需笔记名后加^即可
 		
 		| 后可自定义名字
+		[[00_Markdown_index#^4211a2 | 这是Markdown索引的其中一小段]]
 
 
 
