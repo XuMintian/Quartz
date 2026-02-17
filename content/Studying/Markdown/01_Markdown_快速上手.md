@@ -168,9 +168,9 @@ printf("三个反引号框住代码块");
 
 **嵌入图片**
 
-
-
-![[favicon.png]]
+![[sakura.jpg]]
+这是我自己设计的樱花 Logo👆 o(\*￣▽￣*)o
+(当然有chatGPT的功劳)
 
 
 
