@@ -182,6 +182,10 @@ printf("三个反引号框住代码块");
 
 **嵌入视频**
 
+宽度大小等设置将来可以之间参考为：
+width="100%"
+height="450px"
+
 *嵌入B站视频：*
 
 <iframe
@@ -201,7 +205,9 @@ allowfullscreen="true">
 > **侵权处理**：如果本内容无意中侵犯了您的权益，请联系我（byl2746962022@gmail.com），我将在确认后第一时间删除。
 > *"Respect the art, honor the artist."*
 
-
+复制嵌入链接后，会有两点需要注意
+1. B站复制URL前面默认没有https:，需要手动加上
+2. B站视频默认自动播放，只需在URL后面加上&autoplay=0即可
 
 *嵌入Youtube视频：*
 
