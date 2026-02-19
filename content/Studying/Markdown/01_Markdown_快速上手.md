@@ -180,12 +180,9 @@ printf("三个反引号框住代码块");
 
 更详细的说明，请参考[[02_关于处理PDF的问题| 这里]]
 
-
-
-
-
-
 **嵌入视频**
+
+*嵌入B站视频：*
 
 <iframe
 src="https://player.bilibili.com/player.html?isOutside=true&aid=450941224&bvid=BV1Hj411E7ra&cid=1333975766&t=221&p=1&autoplay=0&high_quality=1" 
@@ -204,11 +201,15 @@ allowfullscreen="true">
 > **侵权处理**：如果本内容无意中侵犯了您的权益，请联系我（byl2746962022@gmail.com），我将在确认后第一时间删除。
 > *"Respect the art, honor the artist."*
 
+
+
+*嵌入Youtube视频：*
+
 <iframe 
-width="100%" 
-height="450px" 
 src="https://www.youtube.com/embed/Q4ENRFgPQeM?si=SNdzYBfQmepBFdKe" 
 title="YouTube video player" 
+width="100%" 
+height="450px" 
 frameborder="0" 
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
 referrerpolicy="strict-origin-when-cross-origin" 
@@ -225,7 +226,12 @@ allowfullscreen="true">
 
 ## 外部链接
 
+访问外部的网站，语法是\[]()，其中\[]内写名字，()内写网址
+
+比如：
  [个人博客](https://xumintian.cn/)
+
+[Google](https://www.google.com)
 
 ## 脚注
 
@@ -243,8 +249,6 @@ allowfullscreen="true">
 
 **其他功能**
 脚注竟然也可以像其他链接手段一样，实现跳转^[可以跳转到[[00_Markdown_index|其他笔记]]] 
-
-
 
 --- 
 
