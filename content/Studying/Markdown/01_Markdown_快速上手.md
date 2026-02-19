@@ -187,7 +187,7 @@ printf("三个反引号框住代码块");
 width="100%"
 height="450px"
 
-关于版权与免责声明，已经在下面给出了样本，只需每次内嵌之后后续附加上
+关于版权与免责声明，已经在下面给出了范本，只需每次内嵌之后后续附加上。
 
 *嵌入B站视频：*
 
@@ -217,9 +217,11 @@ allowfullscreen="true">
 > 
 > *"All copyrights remain with their original owners."*
 
-复制嵌入链接后，会有两点需要注意
-1. B站复制URL前面默认没有https:，需要手动加上
-2. B站视频默认自动播放，只需在URL后面加上&autoplay=0即可
+学习Markdown和实用Obsidian很多参看了这个UP主的视频，在这里表示感谢👨‍🎓
+
+复制嵌入链接后，会有两点需要注意：
+1. B站复制URL前面默认没有https:，需要手动加上。
+2. B站视频默认自动播放，只需在URL后面加上&autoplay=0即可。
 
 *嵌入Youtube视频：*
 
@@ -249,6 +251,8 @@ allowfullscreen="true">
 > 
 > *"All copyrights remain with their original owners."*
 
+Youtube的内嵌代码比B站的完善，除了宽度高度无需多管。
+
 ## 外部链接
 
 访问外部的网站，语法是\[]()，其中\[]内写名字，()内写网址
@@ -260,7 +264,7 @@ allowfullscreen="true">
 
 ## 脚注
 
-有两种方式来实现
+有两种方式来实现：
 
 **第一种**
 在想插入脚注的地方后，打下\[\^1]
