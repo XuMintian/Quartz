@@ -422,17 +422,3 @@ a.internal:hover, a.external:hover {
   transform: translateY(-5px) scale(0.7);
 }
 
-/* 脚注跳转后的高亮效果 */
-:target {
-  background-color: color-mix(in srgb, var(--secondary) 30%, transparent); /* 使用主题次要色作为背景 */
-  border-radius: 4px;
-  transition: background-color 0.5s ease;
-  padding: 0 4px;
-  /* 增加一个呼吸灯般的动画感 */
-  animation: highlight-pulse 2s ease-out;
-}
-
-@keyframes highlight-pulse {
-  0% { outline: 2px solid var(--secondary); outline-offset: 4px; }
-  100% { outline: 2px solid transparent; outline-offset: 0px; }
-}

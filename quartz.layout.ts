@@ -1,6 +1,5 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
-import FootnoteHelper from "./quartz/components/FootnoteHelper"
 
 
 // components shared across all pages
@@ -16,14 +15,6 @@ export const sharedPageComponents: SharedLayout = {
               
             
             ],
-            export const sharedPageComponents: SharedLayout = {
-  head: Component.Head(),
-  header: [],
-  afterBody: [
-    Component.FootnoteHelper(), // 放在这里
-  ],
-  footer: Component.Footer({ ... }),
-}
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/XuMintian",
