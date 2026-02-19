@@ -232,6 +232,10 @@ allowfullscreen="true">
 
 ## 脚注
 
+这是一句话^[这是一个脚注]
+
+
+
  
 
 
