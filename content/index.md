@@ -17,7 +17,7 @@ aliases:
 ## 👋 About Me | 关于我
 
 我是 **许明添 (XuMintian)**, (当然是网名...)   
-一名电子信息工程在读大二学生 ( ZZU & UOW Dual degree program).^2f14aa
+一名*电子信息工程*在读大二学生 ( ZZU & UOW Dual degree program).^2f14aa
 
 为了避免介绍得太人机, 我就直说吧:
 
@@ -26,7 +26,7 @@ aliases:
 我只是一个Nobody. 这里不是招聘会, 没有光鲜的包装, 只有坦诚的承认.
 目前我并没有做成什么事情, 但是我一直没有停下寻找答案的脚步. 
 
-换句话说, 我给我定义的 "普通" 何尝不是大他者的规训? 
+换句话说, 我给我定义的 "普通" 何尝不是*大他者的规训*? 
 
 >"你要怎么怎么样你就不普通, 否则你就是一个普通人."
 
@@ -44,18 +44,23 @@ aliases:
 你可以从这些入口开始探索：
 
 > [!note] **[📖 Studying | 学习区](Studying_index.md)**：
-> Contents
+> 
+> 这里记录了我学习一些东西的过程与笔记, 有点"第二大脑"的感觉, 让我放心地对付遗忘这一人类本性, 像是留下一个过去的自己来教会未来的自己,
+> 也同时我
 
 
 > [!example] **[📂 Projects | 项目区](Projects_index)**：
+> 
 > Contents
 
 
 > [!hint] **[💭 Thoughts | 一些想法](Thoughts_index)**：
+> 
 > Contents
 
 
 > [!quote] **[📦 Resources | 资源区](Resources_index)**：
+> 
 > 一些可能会引用到的资料, 整理在这里, 仅供参考下载
 
 ---
