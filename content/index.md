@@ -52,12 +52,12 @@ aliases:
 
 > [!example] **[📂 Projects | 项目区](Projects_index)**：
 > 
-> Contents
+> 在这里展示我都做了什么(截至现在还是什么都没有做...), 以方面未来可能的合作
 
 
 > [!hint] **[💭 Thoughts | 一些想法](Thoughts_index)**：
 > 
-> Contents
+> 这个地方就比较随意了, 我会上传一些一闪而过的灵感, 未被严肃证实的想法, 以及个人对一个问题的看法, 文章, 或者是一些zu
 
 
 > [!quote] **[📦 Resources | 资源区](Resources_index)**：
