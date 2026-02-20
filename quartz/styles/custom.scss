@@ -432,5 +432,5 @@ hr {
 /* 这会影响 Markdown 中所有 **加粗** 的部分 */
 strong {
   color: #c2185b !important; /* 这里换成另一种颜色，比如橙色，让它跳脱出来 */
-  font-weight: 750; /* 确保加粗依然明显 */
+  font-weight:900 !important; /* 确保加粗依然明显 */
 }
