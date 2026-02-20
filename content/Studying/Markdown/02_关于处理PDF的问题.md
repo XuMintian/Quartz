@@ -2,7 +2,7 @@
 
 而且如果我直接在文件夹内放进 PDF, 随着数量增多, 上传到 Github 空间也将不够, 于是我只能将 PDF 上传到 GitHub Releases ,也就是点击可以直接下载的形式, 然后用外链 \[]() 来给出下载链接.
 
-![[Pasted image 20260220211901.png]]
+![[Pasted image 20260220212055.png]]
 
 ![[Pasted image 20260220211938.png]]
 
@@ -10,9 +10,14 @@
 
 我会将下载做成一个小板块, 如下, 这样可以方便后续直接复制粘贴即可:
 
-> [!abstract] 教材下载 
->  **书名**：Complex Variables and Applications (8th Edition) 
->  
-> **大小**：4.33 MB 
+> [!abstract] PDF 下载 
+> **书名** :  
 > 
->  [📥 点击下载 PDF](https://github.com/XuMintian/Quartz/releases/download/Resources/Complex.Variables.and.Applications.8th.Edition.James.Brown.Ruel.Churchill.Z-Library.pdf)
+> **作者** :  
+> 
+> **大小** : 
+> 
+>  [📥 点击下载 PDF](\)
+
+最后想说一点, 关于版权,正版盗版的问题.
+首先我承认和尊重版权,尊重正版, sh
