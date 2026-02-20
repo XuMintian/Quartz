@@ -4,10 +4,14 @@ aliases:
   - index
   - About Me
 ---
+你好! 这里是我的个人博客 (Digital Garden), 我主要在这里发一些我学习生活中的一些思考, 
+
+
+
 ## 👋 About Me | 关于我
 
 你好！我是 **XuMintian**。
-一名 19 岁的**电子信息工程**在读大二学生（ZZU & UOW ）。 ^2f14aa
+一名 19 岁的**电子信息工程**在读大二学生 ( ZZU & UOW ).^2f14aa
 
 ---
 
