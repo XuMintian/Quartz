@@ -38,24 +38,25 @@ aliases:
 
 ## 🗺️ Navigation | 导航
 
-这个网站分为**四个部分**, 下面有各自的链接, 每一个链接都跳转到对应的Index页, 也就是索引, 方便您快速到达感兴趣的地方.
+这个网站分为**四个部分**, 下面有各自的链接.
+每一个链接都跳转到对应的Index页, 也就是索引, 方便您快速到达感兴趣的地方.
 
 你可以从这些入口开始探索：
 
-
-> [!NOTE] Title
+> [!note] **[📖 Studying | 学习区](Studying_index.md)**：
 > Contents
-* **[📖 Studying | 学习区](Studying_index.md)**：
 
 
-* **[📂 Projects | 项目区](Projects_index)**：
+> [!example] **[📂 Projects | 项目区](Projects_index)**：
+> Contents
 
 
-* **[💭 Thoughts | 一些想法](Thoughts_index)**：这里
+> [!hint] **[💭 Thoughts | 一些想法](Thoughts_index)**：
+> Contents
 
 
-- **[📦 Resources | 资源区](Resources_index)**：一些可能会引用到的资料, 整理在这里, 仅供参考下载
-
+> [!quote] **[📦 Resources | 资源区](Resources_index)**：
+> 一些可能会引用到的资料, 整理在这里, 仅供参考下载
 
 ---
 
