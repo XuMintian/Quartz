@@ -38,25 +38,30 @@ aliases:
 
 ## 🗺️ Navigation | 导航
 
+这个网站分为**四个部分**, 下面有各自的链接, 每一个链接都跳转到对应的Index页, 也就是索引, 方便您快速到达感兴趣的地方.
+
 你可以从这些入口开始探索：
 
-* **[📖 Studying | 学习区](Studying_index.md)**：学习笔记，包含 CS 基础、英语词源积累等。
+
+> [!NOTE] Title
+> Contents
+* **[📖 Studying | 学习区](Studying_index.md)**：
 
 
-* **[📂 Projects | 项目区](Projects_index)**：我的个人项目与折腾记录（比如这个网站的搭建过程）。
+* **[📂 Projects | 项目区](Projects_index)**：
 
 
-* **[💭 Thoughts | 一些想法](Thoughts_index)**：碎片化的想法、灵感闪念或对历史（如唐朝、庄子）的随笔。
+* **[💭 Thoughts | 一些想法](Thoughts_index)**：这里
 
 
-- **[📦 Resources | 资源区](Resources_index)**：可能会引用到的资料，整理在这里。
+- **[📦 Resources | 资源区](Resources_index)**：一些可能会引用到的资料, 整理在这里, 仅供参考下载
 
 
 ---
 
 ## 📮 Connect | 保持联系
 
-在这个互联网角落独自耕耘，但也期待思想的碰撞。
+在这个互联网角落独自耕耘，但也期待思想的碰撞.
 
 * **GitHub**: [XuMintian](https://github.com/XuMintian)
 
