@@ -1,7 +1,7 @@
 > [!abstract] PDF 下载 
 > **书名** :  Complex Variables and Applications (8th Edition) 
 > 
-> **作者** :  
+> **作者** :  James Ward Brown & Ruel V. Churchill 
 > 
 > **大小** : 4.33 MB 
 > 

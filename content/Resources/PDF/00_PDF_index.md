@@ -1,1 +1,1 @@
-index
+[[00_Math_index]]

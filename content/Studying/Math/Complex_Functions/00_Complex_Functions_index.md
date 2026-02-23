@@ -12,8 +12,8 @@
 
 教材:
 
-**Complex Variables and Applications (8th Edition)** [^1]
+**[[A First Course in Complex  Analysis with Applications |Complex Variables and Applications (8th Edition)]]** 
 
 我的思路是先看视频课, 看完之后再看教材, 这样效率高
 
-[^1]: 
+一共
