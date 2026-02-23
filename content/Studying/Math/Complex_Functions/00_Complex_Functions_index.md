@@ -8,10 +8,12 @@
 
 网络资源:
 
-**[<<复变函数>>----台湾大学陈仕元]()**
+**[<<复变函数>>----台湾大学陈仕元](https://ocw.aca.ntu.edu.tw/courses/101S209/1))**
 
 教材:
 
-**Complex Variables and Applications (8th Edition)** 
+**Complex Variables and Applications (8th Edition)** [^1]
 
 我的思路是先看视频课, 看完之后再看教材, 这样效率高
+
+[^1]: 
