@@ -2,14 +2,7 @@
 
 [[00_Markdown_index |Markdown]]
 
-
-
-
-
-
-
-
-
+[[Math_index]]
 
 
 
